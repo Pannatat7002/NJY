@@ -14,6 +14,7 @@ export class SigninPageComponent implements OnInit {
   }
 
   submit(){
+    console.log('1');
     
   }
 }

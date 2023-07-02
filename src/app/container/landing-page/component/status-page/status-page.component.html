@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <div *ngIf="timeout" style="display: flex;margin: auto;">
+        <div class="spinner-grow text-primary" ></div>
+        <div class="spinner-grow text-primary" ></div>
+        <div class="spinner-grow text-primary" ></div>
+    </div>
+    <div *ngIf="!timeout" style="display: flex;margin:  0 auto;">
+        <div class="nav-bar">
+            <span>อัตราการเต้นของหัวใจ</span>
+        </div>
+        <div class="dashboard">
+
+        </div>
+        <div class="others"></div>
+    </div>
+</div>

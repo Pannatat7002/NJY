@@ -6,7 +6,7 @@ import { StartPageComponent } from './container/start-page/start-page.component'
 import { LandingPageComponent } from './container/landing-page/landing-page.component';
 
 const routes: Routes = [
-  { path: '',   redirectTo: '/start', pathMatch: 'full' },  
+  { path: '',   redirectTo: '/signin-page', pathMatch: 'full' },  
   { path: 'signin-page', component: SigninPageComponent },
   { path: 'start', component: StartPageComponent },
   { path: 'landing', component: LandingPageComponent },

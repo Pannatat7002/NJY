@@ -7,6 +7,12 @@ import { LoadingServiceComponent } from './service/loading-service/loading-servi
 import { SigninPageComponent } from './container/signin-page/signin-page.component';
 import { StartPageComponent } from './container/start-page/start-page.component';
 import { LandingPageComponent } from './container/landing-page/landing-page.component';
+import { MainPageComponent } from './container/landing-page/component/main-page/main-page.component';
+import { StatusPageComponent } from './container/landing-page/component/status-page/status-page.component';
+import { HistoryPageComponent } from './container/landing-page/component/history-page/history-page.component';
+import { WorkDatabaseService } from './service/work-database.service';
+import { HttpClientModule } from '@angular/common/http';
+// import { MainPageComponent } from './container/Landing-page/component/main-page/main-page.component';
 
 @NgModule({
   declarations: [
@@ -14,13 +20,17 @@ import { LandingPageComponent } from './container/landing-page/landing-page.comp
     LoadingServiceComponent,
     SigninPageComponent,
     StartPageComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    MainPageComponent,
+    HistoryPageComponent,
+    StatusPageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [WorkDatabaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

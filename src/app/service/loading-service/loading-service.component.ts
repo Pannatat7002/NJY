@@ -12,7 +12,7 @@ export class LoadingServiceComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {                           // <<<---using ()=> syntax
       this.timeout = false;
-    }, 3000);
+    }, 1000);
   }
 
 }
