@@ -1,0 +1,23 @@
+// @font-face {
+//     font-family: 'db_heavent_regular';
+//     src: url('../../../assets/scss/fonts/DB_Heavent_Cond_v3.2.ttf');
+//     font-weight: normal;
+//     font-style: normal; 
+//   }
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    height: 106px;
+    padding: 24px;
+}
+.content{
+    width: 206px;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    line-height: 3rem;
+    font-size: 32px;
+    cursor: pointer;
+}

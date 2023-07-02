@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menu Selection</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .container {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    .menu-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    .menu-list li {
+      margin-bottom: 10px;
+    }
+    .menu-list li label {
+      font-weight: bold;
+    }
+    .menu-list li input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    .submit-btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Menu Selection</h1>
+    <form action="menu.php" method="post">
+      <ul class="menu-list">
+        <li>
+          <input type="checkbox" id="menu1" name="menu[]" value="Menu 1">
+          <label for="menu1">Menu 1</label>
+        </li>
+        <li>
+          <input type="checkbox" id="menu2" name="menu[]" value="Menu 2">
+          <label for="menu2">Menu 2</label>
+        </li>
+        <li>
+          <input type="checkbox" id="menu3" name="menu[]" value="Menu 3">
+          <label for="menu3">Menu 3</label>
+        </li>
+      </ul>
+      <input class="submit-btn" type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>
