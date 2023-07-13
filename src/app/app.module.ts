@@ -12,6 +12,9 @@ import { StatusPageComponent } from './container/landing-page/component/status-p
 import { HistoryPageComponent } from './container/landing-page/component/history-page/history-page.component';
 import { WorkDatabaseService } from './service/work-database.service';
 import { HttpClientModule } from '@angular/common/http';
+import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 // import { MainPageComponent } from './container/Landing-page/component/main-page/main-page.component';
 
 @NgModule({
@@ -28,7 +31,9 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
   ],
   providers: [WorkDatabaseService],
   bootstrap: [AppComponent]
