@@ -2,81 +2,107 @@
   font-family: 'db_heavent_regular';
   src: url('../../../assets/scss/fonts/DB_Heavent_Cond_v3.2.ttf');
   font-weight: normal;
-  font-style: normal; 
+  font-style: normal;
 }
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    border-radius: 12px;
-  }
-  h1 {
-    text-align: center;
-  }
-  
-  .container-fluid {
-    // padding: 0px;
-    height: 100vh;
-    // background: linear-gradient(to top left, #0000ff 0%, #66ffff 100%);
-    position: relative;
-    overflow: hidden;
-    background-image: url("https://www.appsheet.com/image/getremoteimageurl?url=https%3A%2F%2Fwww.appsheet.com%3A443%2Ffsimage.png%3Fappid%3D7cd1e497-7302-4534-86b1-b6e8592e188b%26datasource%3Dgoogle%26filename%3DDocId%3D1pW8QzYN8t0lA5JC_G91RCkaKovhVZpML%26signature%3D27462c020ccfde7d0e455dd9853368d0cec60a7413cf59142b6423a743ec8841%26tableprovider%3Dgoogle%26userid%3D777845&width=1920");
-    background-repeat: no-repeat;
-    background-size: 100% 100vh;
-  }
-  .header{
-    height: 20vh;
-    // background-color:#6495ED;
-  }
-  .form-group {
-    margin-bottom: 10px;
-  }
-  .form-group label {
-    display: block;
-    font-weight: bold;
-  }
-  .form-group input {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  border-radius: 8px;
+
+  input {
     width: 100%;
-    padding: 5px;
-    border: none;
-    border-bottom: 2px solid black;
+    margin-bottom: 1rem;
+    border-radius: 35px;
+    height: 42px;
+    padding-left: 21px;
   }
-  .form-group input[type="submit"] {
-    background-color: #6495ED;
-    border-radius: 24px;
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    width: 100%;
-    font-size: 24px;
-  }
+}
+
+h1 {
+  text-align: center;
+  color: #328cff;
+
+}
+
+.container-fluid {
+  // padding: 0px;
+  height: 100vh;
+  // background: linear-gradient(to top left, #0000ff 0%, #66ffff 100%);
+  position: relative;
+  overflow: hidden;
+  background-image: url("https://www.appsheet.com/image/getremoteimageurl?url=https%3A%2F%2Fwww.appsheet.com%3A443%2Ffsimage.png%3Fappid%3D7cd1e497-7302-4534-86b1-b6e8592e188b%26datasource%3Dgoogle%26filename%3DDocId%3D1pW8QzYN8t0lA5JC_G91RCkaKovhVZpML%26signature%3D27462c020ccfde7d0e455dd9853368d0cec60a7413cf59142b6423a743ec8841%26tableprovider%3Dgoogle%26userid%3D777845&width=1920");
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+}
+
+.header {
+  height: 20vh;
+  // background-color:#6495ED;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+.form-group input[type="submit"] {
+  background-color: #6495ED;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  font-size: 24px;
+}
 
 
-  .signin{
-    // border-radius: 74px;
-    width: 100%;
-  }
+.signin {
+  // border-radius: 74px;
+  width: 100%;
+}
 
-  .box-effect1{
-    right: -131px;
-    height: 600px;
-    width: 600px;
-    background-color: #FFF;
-    border-radius: 27px;
-    position: absolute;
-    rotate: 45deg;
-    top: 653px;
-    opacity: 0.5;
-  }
-  .box-effect2{
-    right: 392px;
-    height: 102px;
-    width: 102px;
-    background-color: #FFF;
-    border-radius: 27px;
-    position: absolute;
-    rotate: 120deg;
-    top: 14px;
-    opacity: 0.5;
-  }
+.box-effect1 {
+  right: -131px;
+  height: 600px;
+  width: 600px;
+  background-color: #FFF;
+  border-radius: 27px;
+  position: absolute;
+  rotate: 45deg;
+  top: 653px;
+  opacity: 0.5;
+}
+
+.box-effect2 {
+  right: 392px;
+  height: 102px;
+  width: 102px;
+  background-color: #FFF;
+  border-radius: 27px;
+  position: absolute;
+  rotate: 120deg;
+  top: 14px;
+  opacity: 0.5;
+}
+
+.version{
+  position: absolute;
+  bottom: 0;
+  right: 12px;
+  font-size: 18px;
+  color: white;
+}

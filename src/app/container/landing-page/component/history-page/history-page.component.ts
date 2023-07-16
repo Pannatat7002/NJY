@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WorkDatabaseService } from 'src/app/service/work-database.service';
+import { AuthService } from '../../../../service/auth-service/auth.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-history-page',
@@ -10,7 +12,9 @@ export class HistoryPageComponent implements OnInit {
   timeout:boolean = true;
   userProfile:any
   constructor(
-    private workDataService:WorkDatabaseService
+    private workDataService:WorkDatabaseService,
+    private AuthService: AuthService,
+    private router: Router
   ) { }
   
   ngOnInit(): void {
@@ -21,6 +25,11 @@ export class HistoryPageComponent implements OnInit {
 
   }
 
+  SignOut(){
+    this.AuthService.SignOut().then(()=>{
+      this.router.navigate([''])
+    })
+  }
 
     getUserProfile(){
       this.workDataService.getHistory('สมทรง หลิมบุญงาม').then((res)=>{

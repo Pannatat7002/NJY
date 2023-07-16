@@ -15,6 +15,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AuthService } from './service/auth-service/auth.service';
+import { FormsModule } from '@angular/forms'; 
+
 // import { MainPageComponent } from './container/Landing-page/component/main-page/main-page.component';
 
 @NgModule({
@@ -34,8 +37,9 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
+    FormsModule
   ],
-  providers: [WorkDatabaseService],
+  providers: [WorkDatabaseService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
