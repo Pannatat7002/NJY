@@ -28,7 +28,7 @@
 <div class="container-fluid">
   <app-main-page *ngIf="selectMode === 'main'"></app-main-page>
   <app-status-page *ngIf="selectMode === 'status'"></app-status-page>
-  <app-history-page *ngIf="selectMode === 'history'"></app-history-page>
+  <app-history-page *ngIf="selectMode === 'history'" [_userProfile]="userProfile" [_timeout]="timeout"></app-history-page>
 </div>
 
 

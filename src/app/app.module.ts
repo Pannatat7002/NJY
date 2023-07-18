@@ -17,6 +17,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AuthService } from './service/auth-service/auth.service';
 import { FormsModule } from '@angular/forms'; 
+import { CookieService } from 'ngx-cookie-service';
 
 // import { MainPageComponent } from './container/Landing-page/component/main-page/main-page.component';
 
@@ -39,7 +40,7 @@ import { FormsModule } from '@angular/forms';
     AngularFireAuthModule,
     FormsModule
   ],
-  providers: [WorkDatabaseService,AuthService],
+  providers: [WorkDatabaseService,AuthService,CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

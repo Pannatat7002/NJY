@@ -1,13 +1,13 @@
 <div class="container-fluid">
-    <div *ngIf="timeout" style="display: flex;margin: auto;">
+    <div *ngIf="_timeout" style="display: flex;margin: auto;">
         <div class="spinner-grow text-primary"></div>
         <div class="spinner-grow text-primary"></div>
         <div class="spinner-grow text-primary"></div>
     </div>
-    <div *ngIf="!timeout" class="profile-main">
+    <div *ngIf="!_timeout" class="profile-main">
         <div class="profile-header">
             <h2>
-              {{userProfile['สาขา']}}<br>
+              {{_userProfile['สาขา']}}<br>
                 ประวัติผู้สูงอายุ 
             </h2>
         </div>
@@ -36,28 +36,28 @@
                   <tr>
                     <td class="text-head">ชื่อ-นามสกุล</td>
                     <td>:</td>
-                    <td>{{userProfile['ชื่อคนไข้']}}</td>
+                    <td>{{_userProfile['ชื่อคนไข้']}}</td>
                   </tr>
                   <tr>
                     <td class="text-head">ประเภท</td>
                     <td>:</td>
-                    <td>{{userProfile['ประเภท']}}</td>
+                    <td>{{_userProfile['ประเภท']}}</td>
                   </tr>
                   <tr>
                     <td class="text-head">โรคประจำตัว</td>
                     <td>:</td>
-                    <td>{{userProfile['โรคประจำตัว']}}</td>
+                    <td>{{_userProfile['โรคประจำตัว']}}</td>
                   </tr>
                   <tr>
                     <td class="text-head">ญาติ</td>
                     <td>:</td>
-                    <td>{{userProfile['ชื่อผู้จ้าง']}}</td>
+                    <td>{{_userProfile['ชื่อผู้จ้าง']}}</td>
                   </tr>
                 </tbody>
                   <tr>
                     <td class="text-head">เบอร์ติดต่อ</td>
                     <td>:</td>
-                    <td>{{userProfile['เบอร์ติดต่อญาติ']}}</td>
+                    <td>{{_userProfile['เบอร์ติดต่อญาติ']}}</td>
                   </tr>
               </table>
               <button class="btn btn-primary buttout" (click)="SignOut()">ออกจากระบบ</button>
