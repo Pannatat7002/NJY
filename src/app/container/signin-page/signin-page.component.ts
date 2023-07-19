@@ -20,11 +20,11 @@ export class SigninPageComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    // const Token = this.cookieService.get('accessToken')
+    const Token = this.cookieService.get('accessToken')
 
-    // if(Token){
-    //   this.router.navigate(['/landing'])
-    // }
+    if(Token){
+      this.router.navigate(['/landing'])
+    }
   }
   onClickSubmit(result: any) {
     console.log("You have email : " + result.email);
