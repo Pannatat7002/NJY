@@ -1,16 +1,38 @@
 <div class="container-fluid">
     <div *ngIf="timeout" style="display: flex;margin: auto;">
-        <div class="spinner-grow text-primary" ></div>
-        <div class="spinner-grow text-primary" ></div>
-        <div class="spinner-grow text-primary" ></div>
+        <div class="spinner-grow text-primary"></div>
+        <div class="spinner-grow text-primary"></div>
+        <div class="spinner-grow text-primary"></div>
     </div>
-    <div *ngIf="!timeout" style="display: flex;margin:  0 auto;">
-        <div class="nav-bar">
-            <span>อัตราการเต้นของหัวใจ</span>
-        </div>
-        <div class="dashboard">
-
-        </div>
-        <div class="others"></div>
+    <div *ngIf="!timeout" style="display: block; justify-content: center;width: 100%;text-align: center;">
+            <h1>อัตราการเต้นของหัวใจ</h1>
+            <div class="datetab">
+                <span>วัน</span>
+                <span>เดือน</span>
+                <span>ปี</span>
+            </div>
+            <div style="width: 100%;margin-bottom: 12px;font-size: 28px;">{{mouthNow}}</div>
+            <canvas baseChart 
+            [datasets]="barChartData" 
+            [labels]="barChartLabels" 
+            [options]="barChartOptions"
+            [plugins]="barChartPlugins" 
+            [legend]="barChartLegend" 
+            [type]="barChartType">
+            </canvas>
+            <div class="summary">
+                <div class="task-content">
+                    <div class="text-title">อัตราการเต้นของหัวใจ</div>
+                    <div class="text-status">47-155 bpm</div>
+                </div>
+                <div class="task-content">
+                    <div class="text-title">อัตราการเต้นของหัวใจขณะ</div>
+                    <div class="text-status">155 rpm</div>
+                </div>
+                <div class="task-content">
+                    <div class="text-title">อัตราออกซิเจน</div>
+                    <div class="text-status">105 Spo2</div>
+                </div>
+            </div>
     </div>
 </div>

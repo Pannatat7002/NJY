@@ -18,6 +18,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AuthService } from './service/auth-service/auth.service';
 import { FormsModule } from '@angular/forms'; 
 import { CookieService } from 'ngx-cookie-service';
+import { NgChartsModule } from 'ng2-charts'; // นำเข้า ChartsModule
 
 // import { MainPageComponent } from './container/Landing-page/component/main-page/main-page.component';
 
@@ -38,7 +39,8 @@ import { CookieService } from 'ngx-cookie-service';
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    FormsModule
+    FormsModule,
+    NgChartsModule
   ],
   providers: [WorkDatabaseService,AuthService,CookieService],
   bootstrap: [AppComponent]

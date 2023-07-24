@@ -1,9 +1,56 @@
-.container-fluid{
+canvas{
+    background-color: #fafafa;
+    border-radius: 18px;
+}
+.container-fluid {
     display: flex;
     height: 80vh;
+    width: 100%;
 }
-.spinner-grow{
+
+.spinner-grow {
     height: 15px;
     width: 15px;
-    margin: 0px 8px;  
+    margin: 0px 8px;
+}
+
+.datetab {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    margin-bottom: 12px;
+
+    span {
+        font-size: 24px;
+        color: black;
+        margin: 10px 10px;
+        padding: 5px;
+        width: auto;
+        border-bottom: 2px solid rgb(30, 136, 229);
+    }
+}
+
+.summary {
+    display: flex;
+    justify-content: left;
+    overflow-y: scroll;
+    width: 100%;
+    .task-content {
+        border: 1px solid #f2f4f6;
+        width: 200px;
+        height: 80px;
+        border-radius: 16px;
+        padding: 0px 20px;
+        margin: 20px 6px;
+        color: #38454c;
+        background-color: #fafafa;
+        .text-title {
+            font-size: 26px;
+            line-height: 40px;
+        }
+        .text-status {
+            font-size: 28px;
+            line-height: 40px;
+        }
+    }
 }

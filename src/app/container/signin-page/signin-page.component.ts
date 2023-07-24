@@ -19,10 +19,11 @@ export class SigninPageComponent implements OnInit {
     private workDataService: WorkDatabaseService,  
   ) { }
 
-  ngOnInit(): void {
-    const Token = this.cookieService.get('accessToken')
-
+  async ngOnInit() {
+    const Token = await this.cookieService.get('accessToken')
     if(Token){
+      console.log("Token",Token);
+      
       this.router.navigate(['/landing'])
     }
   }
