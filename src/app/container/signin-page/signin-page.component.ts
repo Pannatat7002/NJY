@@ -23,7 +23,6 @@ export class SigninPageComponent implements OnInit {
     const Token = await this.cookieService.get('accessToken')
     if(Token){
       console.log("Token",Token);
-      
       this.router.navigate(['/landing'])
     }
   }

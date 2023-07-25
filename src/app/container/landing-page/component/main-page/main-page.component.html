@@ -8,7 +8,8 @@
     </option> -->
     <div>
         หมวดหมู่
-        <select style="border: none;background: none;outline: none;" #typeSelect (change)="selectType(typeSelect.value)">
+        <select style="border: none;background: none;outline: none;" #typeSelect
+            (change)="selectType(typeSelect.value)">
             <option class="form-select">ทั้งหมด</option>
             <option class="form-select" *ngFor="let item of typeData" [value]="item">
                 {{item}}
@@ -18,12 +19,13 @@
     <!-- <div class="icon-arrow-down"></div> -->
 </div>
 <div class="container-fluid">
-    <div *ngIf="timeout" style="display: flex;margin: auto;">
+    <!-- <div *ngIf="timeout" style="display: flex;margin: auto;">
         <div class="spinner-grow text-primary"></div>
         <div class="spinner-grow text-primary"></div>
         <div class="spinner-grow text-primary"></div>
-    </div>
-    <div *ngIf="!timeout">
+    </div> -->
+    <div *ngIf="showToTop" class="bi bi-arrow-up-circle" (click)="scrollToTop()"></div>
+    <div #scrollContainer *ngIf="!timeout" style="overflow-y: scroll;height: 84vh;">
         <div *ngFor="let data of userProfies;">
             <div *ngIf="typeShow ==='ทั้งหมด' || typeShow === data.type" class="post-box">
                 <div class="post-header">
@@ -37,19 +39,18 @@
                         <i class="bi bi-three-dots"></i>
                     </div>
                 </div>
-                <img src="{{data?.image}}" class="ImageWithSpinner__image"
-                    style="width: 100%; max-height: 480px; object-fit: cover;">
                 <div class="post-detail">
                     <div>
                         <span>
-                            เรื่อง : {{data?.title}}
-                        </span><br>
-                        <span>
-                            หมวดหมู่ : {{data?.type}}
+                            เรื่อง : {{data?.title}} หมวดหมู่ : {{data?.type}}
                         </span>
-                    </div><br>
+                    </div>
+                    <br>
                     <div class="post">{{data?.detail}}</div>
                 </div>
+                <img src="{{data?.image}}" class="ImageWithSpinner__image"
+                    style="width: 100%; max-height: 480px; object-fit: cover;">
+
                 <div class="post-footer">
                     <i *ngIf="data.heart == 0" class="bi bi-suit-heart"></i>
                     <i *ngIf="data.heart == 1" class="bi bi-suit-heart-fill" style="color: red;"></i>
@@ -59,7 +60,7 @@
             </div>
         </div>
         <div style="display: flex;">
-            <div style="display: flex;margin: auto;height: 80px;">
+            <div style="display: flex;margin: auto;height: 80px;margin-top: 12px;">
                 <div class="spinner-grow text-primary"></div>
                 <div class="spinner-grow text-primary"></div>
                 <div class="spinner-grow text-primary"></div>

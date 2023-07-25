@@ -21,8 +21,13 @@ timeout:boolean = true;
   ) { }
 
   ngOnInit(): void {
-    this.userProfile = JSON.parse(this.cookieService.get('userProfile'))    
-    this.getUserProfile(this.userProfile.ender)
+    const Token = this.cookieService.get('accessToken')
+    if(!Token){
+      this.router.navigate([''])
+    } else {
+      this.userProfile = JSON.parse(this.cookieService.get('userProfile'))    
+      this.getUserProfile(this.userProfile.ender)
+    }
   }
 
   SignOut(){

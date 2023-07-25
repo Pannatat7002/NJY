@@ -17,9 +17,7 @@ canvas{
 .datetab {
     display: flex;
     justify-content: center;
-    height: 50px;
-    margin-bottom: 12px;
-
+    height: 53px;
     span {
         font-size: 24px;
         color: black;
@@ -33,8 +31,9 @@ canvas{
 .summary {
     display: flex;
     justify-content: left;
-    overflow-y: scroll;
     width: 100%;
+    overflow: auto;
+    white-space: nowrap;    
     .task-content {
         border: 1px solid #f2f4f6;
         width: 200px;
@@ -42,8 +41,10 @@ canvas{
         border-radius: 16px;
         padding: 0px 20px;
         margin: 20px 6px;
+        margin-bottom: 0;
         color: #38454c;
         background-color: #fafafa;
+        display: inline-block;
         .text-title {
             font-size: 26px;
             line-height: 40px;
@@ -52,5 +53,31 @@ canvas{
             font-size: 28px;
             line-height: 40px;
         }
+    }
+    .active{
+        background-color: #36a2eb;
+        color: #FFF;
+    }
+}
+
+.summary-content{
+    width: 100%;
+    height: 215px;
+    background: #FAFAFA;
+    border-radius: 15px;
+    // border: 2px solid #d3cece;
+    padding: 14px;
+    position: relative;
+    margin-top: 12px;
+    .summary-detail{
+        font-size: 20px;
+        color: #38454c;
+    }
+    .bi-clipboard-heart-fill{
+        margin-left: 1rem;
+        top: 13px;
+        right: 145px;
+        font-size: 35px;
+        color: #ea4a4a;
     }
 }

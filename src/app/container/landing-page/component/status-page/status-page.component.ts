@@ -22,7 +22,7 @@ export class StatusPageComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {                           // <<<---using ()=> syntax
       this.timeout = false;
-    }, 1500);
+    }, 300);
     console.log('Current Month:', this.getCurrentMonth().month);
     console.log('Days in Current Month:', this.getCurrentMonth().days);
     this.getCurrentMonth()
