@@ -26,34 +26,50 @@
     </div> -->
     <div *ngIf="showToTop" class="bi bi-arrow-up-circle" (click)="scrollToTop()"></div>
     <div #scrollContainer *ngIf="!timeout" style="overflow-y: scroll;height: 84vh;">
-        <div *ngFor="let data of userProfies;">
-            <div *ngIf="typeShow ==='ทั้งหมด' || typeShow === data.type" class="post-box">
+        <div *ngFor="let data of userProfies; let i = index">
+            <div *ngIf="(typeShow ==='ทั้งหมด' || typeShow === data.type) && data.show" class="post-box">
                 <div class="post-header">
                     <div style="display: flex;">
                         <div class="post-img"></div>
                         <span class="post-name">{{data?.name}}<br>
-                            <span>{{data?.timestamp}} นาที่</span>
+                            <span>{{data?.timestamp}}</span>
+                            <!-- <span>{{data?.timestamp}} นาที่</span> -->
                         </span>
                     </div>
                     <div>
-                        <i class="bi bi-three-dots"></i>
+                        <!-- <i class="bi bi-three-dots"></i> -->
+                        <div class="dropdown">
+                            <button type="button" data-toggle="dropdown">
+                                <i class="bi bi-three-dots"></i> 
+                            </button>
+                            <div class="dropdown-menu">
+                                <!-- <h5 class="dropdown-header">Dropdown header</h5>
+                                <a class="dropdown-item" href="#">Link 1</a>
+                                <a class="dropdown-item" href="#">Link 2</a>
+                                <a class="dropdown-item" href="#">Link 3</a> -->
+                                <div (click)="deleteContent(i)" class="dropdown-header"><i class="bi bi-x-square-fill" style="font-size: 24px;margin-right: 12px;"></i>ปิดการแสดงนี้</div>
+                                <div class="dropdown-header"><i class="bi bi-chat-right-text-fill" style="font-size: 24px;margin-right: 12px;"></i>ทำการส่งรายงาน</div>
+                                <!-- <a class="dropdown-item" href="#">Another link</a> -->
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="post-detail">
                     <div>
                         <span>
-                            เรื่อง : {{data?.title}} หมวดหมู่ : {{data?.type}}
+                            <!-- เรื่อง : {{data?.title}} -->
+                            หมวดหมู่ : {{data?.type}} {{i}}
                         </span>
                     </div>
                     <br>
                     <div class="post">{{data?.detail}}</div>
                 </div>
-                <img src="{{data?.image}}" class="ImageWithSpinner__image"
-                    style="width: 100%; max-height: 480px; object-fit: cover;">
+                <img data-toggle="modal" data-target="#imageModal" src="{{data?.image}}" class="ImageWithSpinner__image"
+                    style="width: 100%; max-height: 380px; object-fit: cover;" (click)="alertImage(data?.image)">
 
                 <div class="post-footer">
-                    <i *ngIf="data.heart == 0" class="bi bi-suit-heart"></i>
-                    <i *ngIf="data.heart == 1" class="bi bi-suit-heart-fill" style="color: red;"></i>
+                    <i *ngIf="!data.heart" class="bi bi-suit-heart"></i>
+                    <i *ngIf="data.heart" class="bi bi-suit-heart-fill" style="color: red;"></i>
                     <i class="bi bi-share"></i>
                     <!-- <i class="fas fa-share"></i> -->
                 </div>
@@ -69,6 +85,15 @@
     </div>
 </div>
 
+<div class="modal fade" id="imageModal">
+    <div class="modal-dialog" style="margin: 18vh 0;padding: 0;">
+        <div class="modal-content" style="position: relative;">
+            <!-- Modal Header -->
+            <!-- <button type="button" class="close" data-dismiss="modal" style="position: absolute;top: 0;right: 0;">&times;</button> -->
+            <img src="{{Image}}" alt="">
+        </div>
+    </div>
+</div>
 <!-- <div class="post-box">
       <div class="post-header">
         <div style="display: flex;">

@@ -18,4 +18,9 @@ export class WorkDatabaseService {
     var url = `https://script.google.com/macros/s/AKfycby3IsKQwc_eg0ll6VhUSCcuRM42RfIrlZg3rS2oRoWPXk0sitE8OKbKmJkhotQUifg5hw/exec?configName=getUserProfile&email=${email}`
     return this.http.get(url).toPromise();
     }
+
+  public queryStoryData(offset:number,maxoffset:number): Promise<any> {
+    var url = `https://script.google.com/macros/s/AKfycbyCN2crmOYmua74Eowhifbn6oEg8iorHLRGl2b-ng3TSiWCMgYRazfAWomFFio9SGlmSA/exec?offset=${offset}&max=${maxoffset}`
+    return this.http.get(url).toPromise();
+    }
 }
