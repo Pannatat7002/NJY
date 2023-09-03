@@ -22,7 +22,7 @@ input {
   border: none;
   font-family: 'db_heavent_regular';
   font-size: 26px;
-  background: #1982f3;
+  // background: #1982f3;
 }
 
 h1 {
@@ -43,7 +43,15 @@ h1 {
   background-color: #F5F5F5;
   // background-size: 100% 100vh;
 }
-
+.title-header{
+  font-size: 50px;
+    text-align: center;
+    line-height: 44px;
+    letter-spacing: 3px;
+    color: #007bff;
+    padding-bottom: 3rem;
+    padding-top: 2rem;
+}
 .header {
   // height: 160px;
   width: 100%;
