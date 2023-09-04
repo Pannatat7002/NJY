@@ -70,19 +70,23 @@ export class SigninPageComponent implements OnInit {
 
   }
 
-  forget() {
-    const auth = getAuth();
-    console.log('forget auth',auth);
+  // forget() {
+  //   const auth = getAuth();
+  //   console.log('forget auth',auth);
     
-    sendPasswordResetEmail(auth,'pannatat7002@gmail.com')
-      .then(() => {
-        // Password reset email sent!
-        // ..
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // ..
-      });
+  //   sendPasswordResetEmail(auth,'pannatat7002@gmail.com')
+  //     .then(() => {
+  //       // Password reset email sent!
+  //       // ..
+  //     })
+  //     .catch((error) => {
+  //       const errorCode = error.code;
+  //       const errorMessage = error.message;
+  //       // ..
+  //     });
+  // }
+
+  closeforGet(evet:boolean){
+    this.forgot = evet
   }
 }

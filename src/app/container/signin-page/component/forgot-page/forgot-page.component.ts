@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 // import { AuthService } from '../../../../service/auth-service/auth.service'
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 @Component({
@@ -8,6 +8,10 @@ import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 })
 export class ForgotPageComponent implements OnInit {
   timeOutLoading: boolean = false
+  errorCode:any
+  errorMessage:any
+
+  @Output() closeforGet = new EventEmitter<boolean>();
 
   constructor() { }
 
@@ -19,18 +23,29 @@ export class ForgotPageComponent implements OnInit {
     this.timeOutLoading = event
   }
 
+  closeForGet(){
+    console.log('closeForGet');
+    this.closeforGet.emit(false)
+  }
+
   forget() {
     const auth = getAuth();
     console.log('forget auth',auth);
     
     sendPasswordResetEmail(auth,'pannatat7002@gmail.com')
       .then(() => {
-        window.location.href = "/"
+        this.closeForGet()
+        // console.log('closeForGet');
+        
+        // window.location.href = "/"
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // ..
+        this.errorCode = error.code;
+        this.errorMessage = error.message;
+        setTimeout(() => {                           // <<<---using ()=> syntax
+          this.closeForGet()
+        }, 3000);
+
       });
   }
 }

@@ -1,11 +1,11 @@
 <app-loading-service *ngIf="timeOutLoading === false" (timeOutLoading)="loading($event)"></app-loading-service>
 <div [hidden]="!timeOutLoading" class="containers">
     <div class="headers">
-        <a class="butBack" href="/signin-page">
+        <div class="butBack" (click)="closeForGet()">
             <div class="bi bi-arrow-left" style="cursor: pointer;">            
                 <!-- <a rel="stylesheet" href="/signin-page" ></a> -->
             </div>
-        </a>
+        </div>
         <div>Forgot Password</div>
         <div class="title-header">Select which methods you’d like to reset.</div>
     </div>
@@ -22,5 +22,9 @@
     </div>
     <div class="butReset">
         <button (click)="forget()">Reset Password<i class="bi bi-arrow-right"></i></button>
+    </div>
+    <div style="color: red;">
+        <!-- <h2>{{errorCode}}</h2> -->
+        <h2>{{errorMessage}}</h2>
     </div>
 </div>
