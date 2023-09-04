@@ -12,6 +12,7 @@ import { WorkDatabaseService } from 'src/app/service/work-database.service';
 export class SigninPageComponent implements OnInit {
   alertError: any
   userProfile: any
+  timeOutLoading:boolean = false
   constructor(
     private AuthService: AuthService,
     private router: Router,
@@ -56,6 +57,12 @@ export class SigninPageComponent implements OnInit {
       this.alertError = JSON.stringify(err.code)
     })
   }
+  
+  loading(event:any){
+    console.log('event',event);
+    this.timeOutLoading = event
+  }
+
   submit() {
     console.log('1');
 

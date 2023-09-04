@@ -18,7 +18,8 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AuthService } from './service/auth-service/auth.service';
 import { FormsModule } from '@angular/forms'; 
 import { CookieService } from 'ngx-cookie-service';
-import { NgChartsModule } from 'ng2-charts'; // นำเข้า ChartsModule
+import { NgChartsModule } from 'ng2-charts';
+import { SplashComponent } from './service/splash-service/splash/splash.component'; // นำเข้า ChartsModule
 
 // import { MainPageComponent } from './container/Landing-page/component/main-page/main-page.component';
 
@@ -31,7 +32,8 @@ import { NgChartsModule } from 'ng2-charts'; // นำเข้า ChartsModule
     LandingPageComponent,
     MainPageComponent,
     HistoryPageComponent,
-    StatusPageComponent
+    StatusPageComponent,
+    SplashComponent
   ],
   imports: [
     BrowserModule,
