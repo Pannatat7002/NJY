@@ -5,10 +5,12 @@ import { AppComponent } from './app.component';
 import { StartPageComponent } from './container/start-page/start-page.component';
 import { LandingPageComponent } from './container/landing-page/landing-page.component';
 import { SplashComponent } from './service/splash-service/splash/splash.component';
+import { ForgotPageComponent } from './container/signin-page/component/forgot-page/forgot-page.component';
 
 const routes: Routes = [
   { path: '',   redirectTo: '/start', pathMatch: 'full' },  
   { path: 'signin-page', component: SigninPageComponent },
+  // { path: 'forgot-page', component: ForgotPageComponent },
   { path: 'start', component: StartPageComponent },
   { path: 'landing', component: LandingPageComponent },
   // { path: 'Splash', component: SplashComponent },

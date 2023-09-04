@@ -19,7 +19,8 @@ import { AuthService } from './service/auth-service/auth.service';
 import { FormsModule } from '@angular/forms'; 
 import { CookieService } from 'ngx-cookie-service';
 import { NgChartsModule } from 'ng2-charts';
-import { SplashComponent } from './service/splash-service/splash/splash.component'; // นำเข้า ChartsModule
+import { SplashComponent } from './service/splash-service/splash/splash.component';
+import { ForgotPageComponent } from './container/signin-page/component/forgot-page/forgot-page.component'; // นำเข้า ChartsModule
 
 // import { MainPageComponent } from './container/Landing-page/component/main-page/main-page.component';
 
@@ -33,7 +34,8 @@ import { SplashComponent } from './service/splash-service/splash/splash.componen
     MainPageComponent,
     HistoryPageComponent,
     StatusPageComponent,
-    SplashComponent
+    SplashComponent,
+    ForgotPageComponent
   ],
   imports: [
     BrowserModule,
