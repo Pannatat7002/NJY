@@ -1,5 +1,5 @@
-<app-loading-service></app-loading-service>
-<html style="width: 100%; height: 100vh;overflow: scroll; background-color: #F0F2F5;font-family: 'db_heavent_regular';">
+<app-loading-service *ngIf="timeOutLoading === false" (timeOutLoading)="loading($event)"></app-loading-service>
+<html *ngIf="timeOutLoading === true" style="width: 100%; height: 100vh;overflow: scroll; background-color: #F0F2F5;font-family: 'db_heavent_regular';">
 <Nav class="navbar">
   <div class="Brand">
     <p>Follow App</p>

@@ -1,41 +1,112 @@
-
 .loader {
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid #3498db;
-    width: 70px;
-    height: 70px;
-    -webkit-animation: spin 2s linear infinite; /* Safari */
-    animation: spin 2s linear infinite;
-    margin: auto;
-  }
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 70px;
+  height: 70px;
+  -webkit-animation: spin 2s linear infinite;
   /* Safari */
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+/* Safari */
 @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
+  0% {
+    -webkit-transform: rotate(0deg);
   }
 
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
   }
-  .center .inner {
-    inset: 0;
-    margin: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container-loading {
+  position: relative;
+  z-index: 90;
+  width: 100%;
+  // height: 100%;
+  height: 100vh;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: #2b78eb;
+}
+
+.inner {
+  padding: 12px;
+  height: max-content;
+  width: max-content;
+  justify-content: center;
+  justify-items: center;
+  position: relative;
+}
+
+.loading-Content {
+  margin: auto;
+  color: #FFF;
+  font-family: cursive;
+  text-align: center;
+  position: relative;
+  z-index: 84;
+  .loading-text {
+    font-size: 36px;
+    padding: 18px;
+  }
+
+  .title {
+    font-size: 16px;
+    padding: 18px;
+  }
+
+  .box1 {
     position: absolute;
-    z-index: 99;
-    background-color: #2125297a;
-    width: 100%;
-    height: 100%;
-    display: grid;
+    opacity: 0.4;
+    background: #a2d2ff;
+    // inset: 0;
+    z-index: 100;
+    top: 229.1370849609375px;
+    border-radius: 72px;
+    width: 159.99999726171663px;
+    height: 223.9999961664033px;
+    left: 129px;
+    rotate: 119deg;
+  }
+  .box2 {
+    position: absolute;
+    opacity: 0.5;
+    background: #a2d2ff;
+    inset: 0;
+    top: -307.8629150391px;
+    border-radius: 72px;
+    width: 159.9999972617px;
+    height: 223.9999961664px;
+    left: -115px;
+    rotate: 61deg;
 
-    background-image: url("https://www.appsheet.com/image/getremoteimageurl?url=https%3A%2F%2Fwww.appsheet.com%3A443%2Ffsimage.png%3Fappid%3D7cd1e497-7302-4534-86b1-b6e8592e188b%26datasource%3Dgoogle%26filename%3DDocId%3D1pW8QzYN8t0lA5JC_G91RCkaKovhVZpML%26signature%3D27462c020ccfde7d0e455dd9853368d0cec60a7413cf59142b6423a743ec8841%26tableprovider%3Dgoogle%26userid%3D777845&width=1920");
-    background-color: #cccccc;
-    background-repeat: no-repeat;
-    background-size: 100% 100vh;
   }
-  .inner {
-    padding: 12px;
-    height: max-content;
-    width: max-content;
+  .box3 {
+    inset: 0;
+    position: absolute;
+    opacity: 0.8;
+    background: #a2d2ff;
+    // z-index: 83;
+    top: -189.86291503910002px;
+    border-radius: 72px;
+    width: 159.9999972617px;
+    height: 223.9999961664px;
+    rotate: 61deg;
+    left: 171px;
   }
+}

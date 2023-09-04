@@ -13,6 +13,7 @@ export class LandingPageComponent implements OnInit {
 selectMode:string = "main"
 userProfile:any
 timeout:boolean = true;
+timeOutLoading:boolean = false;
   constructor(
     private AuthService:AuthService,
     private router: Router,
@@ -28,6 +29,11 @@ timeout:boolean = true;
       this.userProfile = JSON.parse(this.cookieService.get('userProfile'))    
       this.getUserProfile(this.userProfile.ender)
     }
+  }
+
+  loading(event:any){
+    console.log('event',event);
+    this.timeOutLoading = event
   }
 
   SignOut(){

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-loading-service',
@@ -7,12 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoadingServiceComponent implements OnInit {
   timeout:boolean = true
+  @Output() timeOutLoading = new EventEmitter<boolean>();
+
   constructor() { }
 
   ngOnInit(): void {
-    setTimeout(() => {                           // <<<---using ()=> syntax
-      this.timeout = false;
-    }, 1000);
+    setTimeout(() => {    
+      console.log('timeOutLoading',this.timeOutLoading);
+      
+      this.timeOutLoading.emit(true)
+      // this.timeout = false;
+    }, 1500);
   }
 
 }
