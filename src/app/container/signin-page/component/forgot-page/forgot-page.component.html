@@ -20,9 +20,13 @@
             </div>
         </div>
     </div>
-    <div class="butReset">
-        <button (click)="forget()">Reset Password<i class="bi bi-arrow-right"></i></button>
+    <form class="form-group text-left" #userName="ngForm" (ngSubmit)="forget(userName.value)">
+    <span class="text"><i class="bi bi-envelope-at"></i>Email Address</span><br>
+    <input #email type="email" name="email" placeholder="email" ngModel>
+    <div class="butReset"    [ngClass]="{'butReset-dis': !userName.value.email}"    >
+        <button [disabled]="!userName.value.email" type="submit" >Reset Password<i class="bi bi-arrow-right"></i></button>
     </div>
+    </form>
     <div style="color: red;">
         <!-- <h2>{{errorCode}}</h2> -->
         <h2>{{errorMessage}}</h2>

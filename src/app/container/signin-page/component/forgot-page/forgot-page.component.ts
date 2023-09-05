@@ -1,4 +1,4 @@
-import { Component, OnInit,Output,EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 // import { AuthService } from '../../../../service/auth-service/auth.service'
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 @Component({
@@ -8,8 +8,8 @@ import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 })
 export class ForgotPageComponent implements OnInit {
   timeOutLoading: boolean = false
-  errorCode:any
-  errorMessage:any
+  errorCode: any
+  errorMessage: any
 
   @Output() closeforGet = new EventEmitter<boolean>();
 
@@ -23,23 +23,19 @@ export class ForgotPageComponent implements OnInit {
     this.timeOutLoading = event
   }
 
-  closeForGet(){
+  closeForGet() {
     console.log('closeForGet');
     this.closeforGet.emit(false)
   }
 
-  forget() {
+  forget(velue: any) {
     const auth = getAuth();
-    console.log('forget auth',auth);
-    
-    sendPasswordResetEmail(auth,'pannatat7002@gmail.com')
-      .then(() => {
+    console.log('forget auth', auth);
+    console.log('data', velue.email);
+    if (velue.email) {
+      sendPasswordResetEmail(auth, velue.email).then(() => {
         this.closeForGet()
-        // console.log('closeForGet');
-        
-        // window.location.href = "/"
-      })
-      .catch((error) => {
+      }).catch((error) => {
         this.errorCode = error.code;
         this.errorMessage = error.message;
         setTimeout(() => {                           // <<<---using ()=> syntax
@@ -47,5 +43,10 @@ export class ForgotPageComponent implements OnInit {
         }, 3000);
 
       });
+    }
+  }
+
+  onClickSubmit(result: any) {
+    console.log("You have email : " + result.email);
   }
 }
