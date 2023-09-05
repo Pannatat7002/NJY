@@ -45,7 +45,6 @@ h1 {
   background-color: #F5F5F5;
   // background-size: 100% 100vh;
 }
-
 .title-header {
   font-size: 50px;
   text-align: center;
@@ -94,10 +93,11 @@ h1 {
   .forgot {
     font-family: 'db_heavent_regular';
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 500;
     padding: 8px;
     line-height: 19px;
     letter-spacing: -0.01em;
+    cursor: pointer;
   }
 }
 

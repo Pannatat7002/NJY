@@ -1,5 +1,5 @@
-<div class="container-fluid">
-    <div class="content-header">
+<div class="container-xl p-0">
+    <div class="content-header p-2">
         <div class="content-bar">
             <span>
                 <i class="bi bi-calendar3"></i>
@@ -9,7 +9,7 @@
             </span>
         </div>
         <div class="content-profile">
-            <div class="image" >
+            <div class="image">
                 <i class="bi bi-person-bounding-box"></i>
             </div>
             <div class="name">Hello, Pannatat! <br>
@@ -30,29 +30,52 @@
     </div>
     <div class="content-body">
         <div class="tab-insights">
-            <div style="display: flex;justify-content: space-between;">
+            <div class="pl-3 pr-3" style="display: flex;justify-content: space-between;">
                 <span>health-insights</span>
                 <i class="bi bi-three-dots"></i>
             </div>
 
-            <div class="health-insights">
-                <div (click)="onNext()" class="insight-show" style="background: #007bff80;">
+            <div class="health-insights p-2">
+                <div (click)="onNext()" class="insight-show" style="background: #007bff80;box-shadow: 3px 3px 10px #007bff80;">
                     <div class="content-title">
                         <div class="title">Heart Rate</div>
                         <div><i class="bi bi-graph-up"></i></div>
                     </div>
                 </div>
-                <div class="insight-show" style="background: #f3506c;">
+                <div class="insight-show" style="background: #f3506c;box-shadow: 3px 3px 10px #f3506c;">
                     <div class="content-title">
                         <div class="title">Heart Rate</div>
                         <div><i class="bi bi-bar-chart-line"></i></div>
                     </div>
                 </div>
-                <div class="insight-show" style="background: #84cc16;">
+                <div class="insight-show" style="background: #84cc16;box-shadow: 3px 3px 10px #84cc16;">
                     <div class="content-title">
                         <div class="title">Heart Rate</div>
                         <i class="bi bi-water"></i>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-appointment">
+            <div class="pl-3 pr-3"
+                style="display: flex;justify-content: space-between;font-weight: 600;">
+                <span>กำหนดการต่างๆ 2+</span>
+                <i class="bi bi-three-dots"></i>
+            </div>
+
+            <div class="table-appointment p-2">
+                <div class="content-appointment">
+
+                </div>
+                <div class="content-appointment">
+
+                </div>
+                <div class="content-appointment">
+
+                </div>
+                <div  class="text-center" style="color: #adb5bd;">
+                    Emtry
                 </div>
             </div>
         </div>

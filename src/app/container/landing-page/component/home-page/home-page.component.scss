@@ -5,9 +5,9 @@
     font-style: normal;
 }
 
-.container-fluid {
+.container-xl	 {
     // padding: 0;
-    background: #FFF;
+    background: #e9ecef;
     height: 100%;
     // border-radius: 0px 0px 30px 30px;
 
@@ -88,7 +88,7 @@
             font-weight: 600;
             letter-spacing: 1px;
             i{
-                opacity: 0.5;
+                opacity: 0.9;
             }
             .health-insights{white-space: nowrap;
                 // max-width: 100%;
@@ -113,8 +113,10 @@
                         color: #FFF;
             
                         .title {
-                            font-size: 24px;
-                            margin: 10px;
+                            text-align: left;
+                            font-size: 18px;
+                            // margin: 10px;
+                            margin-bottom: 1rem;
                         }
             
                         i {
@@ -122,6 +124,33 @@
                             font-size: 80px;
                         }
                     }
+                }
+            }
+        }
+        .tab-appointment{
+            font-size: 24px;
+            // padding-top: 18px;
+            // font-weight: 600;
+            letter-spacing: 1px;
+            .table-appointment{
+                display: grid;
+                min-height: 120px;
+                max-height: 31vh;
+                background: #FFF;
+                overflow-y: scroll;
+                box-shadow: 3px 3px 10px #c5c5c5;
+                margin: 12px;
+                border-radius: 38px;
+                align-items: center;
+                .content-appointment{
+                    margin: 5px;
+                    height: 96px;
+                    // width: 100%;
+                    background: #F0F2F5;
+                    border-radius: 24px;
+                }
+                .title-appointment{
+
                 }
             }
         }
