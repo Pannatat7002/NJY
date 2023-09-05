@@ -1,17 +1,12 @@
 <app-loading-service *ngIf="timeOutLoading === false" (timeOutLoading)="loading($event)"></app-loading-service>
 <html *ngIf="timeOutLoading === true" style="width: 100%; height: 100vh;overflow: scroll; background-color: #F0F2F5;font-family: 'db_heavent_regular';">
-<Nav class="navbar">
+<!-- <Nav class="navbar">
   <div class="Brand">
     <p>Follow App</p>
   </div>
   <div class="Brand">
-    <!-- <img src="assets/images/icons/icon-home.png" alt="" height="32px"> -->
   </div>
-  <!-- <div class="header-title">
-    <h1>{{selectMode}}</h1>
-  </div> -->
-  <!-- <button class="btn btn-primary" (click)="SignOut()">ออกจากระบบ</button> -->
-</Nav>
+</Nav> -->
 
 
 <!-- <div class="fillter-show">
@@ -26,9 +21,10 @@
 </div> -->
 
 <div class="container-fluid">
-  <app-main-page *ngIf="selectMode === 'main'"></app-main-page>
+  <app-main-page *ngIf="selectMode === 'post'"></app-main-page>
+  <app-home-page *ngIf="selectMode === 'home'"></app-home-page>
   <app-status-page *ngIf="selectMode === 'status'"></app-status-page>
-  <app-history-page *ngIf="selectMode === 'history'" [_userProfile]="userProfile" [_timeout]="timeout"></app-history-page>
+  <app-history-page *ngIf="selectMode === 'profile'" [_userProfile]="userProfile" [_timeout]="timeout"></app-history-page>
 </div>
 
 
@@ -37,14 +33,17 @@
 <Nav class="navbar-down fixed-bottom">
   <div class="content-topic">
     <div class="content">
-      <div (click)="selectMode = 'main'" [ngStyle]="{'opacity': selectMode === 'main' ? '1' : '0.7' }" >
+      <div (click)="selectMode = 'home'" [ngStyle]="{'opacity': selectMode === 'home' ? '1' : '0.7' }" >
         <i class="bi bi-house-fill"></i>
       </div>
-      <div (click)="selectMode = 'status'" [ngStyle]="{'opacity': selectMode === 'status' ? '1' : '0.7' }" >
-        <i class="bi bi-clipboard-pulse"></i>      
+      <div (click)="selectMode = 'post'" [ngStyle]="{'opacity': selectMode === 'post' ? '1' : '0.7' }" >
+        <i class="bi bi-bar-chart-fill"></i>
       </div>
-      <div (click)="selectMode = 'history'" [ngStyle]="{'opacity': selectMode === 'history' ? '1' : '0.7' }" >
-        <i class="bi bi-person-circle"></i>
+      <div (click)="selectMode = 'status'" [ngStyle]="{'opacity': selectMode === 'status' ? '1' : '0.7' }" >
+        <i class="bi bi-activity"></i>
+      </div>
+      <div (click)="selectMode = 'profile'" [ngStyle]="{'opacity': selectMode === 'profile' ? '1' : '0.7' }" >
+        <i class="bi bi-person-fill"></i>
       </div>
     </div>
   </div>

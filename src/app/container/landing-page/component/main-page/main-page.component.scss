@@ -175,3 +175,27 @@ button {
   color: #b6b6b6;
   padding-bottom: 8px;
 }
+
+.navbar {
+  width: 100%;
+  padding: 0;
+  // background-color: #FFF;
+  background-color: rgb(30, 136, 229);
+  display: flex;
+  justify-content: space-between;
+
+  .Brand {
+
+    // width: 100%;
+    img,
+    p {
+      // height: auto;
+      color: #FFF;
+      line-height: 3.5rem;
+      padding: 0 24px;
+      font-size: 32px;
+      margin: 0;
+      cursor: pointer;
+    }
+  }
+}

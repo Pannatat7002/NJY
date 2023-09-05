@@ -11,7 +11,7 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class LandingPageComponent implements OnInit {
 // selectMode:string = "status"
-selectMode:string = "main"
+selectMode:string = "home"
 userProfile:any
 timeout:boolean = true;
 timeOutLoading:boolean = false;
