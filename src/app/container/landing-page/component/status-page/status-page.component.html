@@ -1,45 +1,42 @@
-<div class="container-lg" >
-    <div *ngIf="timeout" style="display: flex;margin: auto;">
-        <div class="spinner-grow text-primary"></div>
-        <div class="spinner-grow text-primary"></div>
-        <div class="spinner-grow text-primary"></div>
-    </div>
-    <div *ngIf="!timeout" style="display: block; justify-content: center;width: 100%;text-align: center;">
-            <h1 style="height: 15px;">อัตราการเต้นของหัวใจ</h1>
-            <div class="datetab">
-                <span>วัน</span>
-                <span>เดือน</span>
-                <span>ปี</span>
+<app-loading-service *ngIf="!timeOutLoading" (timeOutLoading)="loading($event)"></app-loading-service>
+<div [hidden]="!timeOutLoading" class="container-lg">
+
+    <div style="display: block; justify-content: center;width: 100%;text-align: center;">
+        <div (click)="onBack()" class="butBack bi bi-backspace" style="cursor: pointer;">
+            <span style="margin-left: 18px;">อัตราการเต้นของหัวใจ</span>
+        </div>
+        <div class="datetab">
+            <span>1 day</span>
+            <span>1 week</span>
+            <span>1 month</span>
+            <span>All</span>
+        </div>
+        <div style="width: 100%;margin-bottom: 6px;font-size: 28px;height: 30px;color: #343a40;">เดือน : {{mouthNow}}</div>
+        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+            [plugins]="barChartPlugins" [legend]="barChartLegend" [type]="barChartType">
+        </canvas>
+        <div class="summary">
+            <div class="task-content active">
+                <div class="text-title">อัตราการเต้นของหัวใจ</div>
+                <div class="text-status">47-155 bpm</div>
             </div>
-            <div style="width: 100%;margin-bottom: 6px;font-size: 28px;height: 30px;">{{mouthNow}}</div>
-            <canvas baseChart 
-            [datasets]="barChartData" 
-            [labels]="barChartLabels" 
-            [options]="barChartOptions"
-            [plugins]="barChartPlugins" 
-            [legend]="barChartLegend" 
-            [type]="barChartType">
-            </canvas>
-            <div class="summary">
-                <div class="task-content active">
-                    <div class="text-title">อัตราการเต้นของหัวใจ</div>
-                    <div class="text-status">47-155 bpm</div>
-                </div>
-                <div class="task-content">
-                    <div class="text-title">อัตราการเต้นของหัวใจขณะ</div>
-                    <div class="text-status">155 rpm</div>
-                </div>
-                <div class="task-content">
-                    <div class="text-title">อัตราออกซิเจน</div>
-                    <div class="text-status">105 Spo2</div>
-                </div>
+            <div class="task-content">
+                <div class="text-title">อัตราการเต้นของหัวใจขณะ</div>
+                <div class="text-status">155 rpm</div>
             </div>
-            <div class="summary-content">
-                <!-- <i class="bi bi-clipboard-heart-fill"></i> -->
-                <div class="summary-detail text-left">
-                    <div style="font-size: 32px;">อัตราการเต้นของหัวใจ<i class="bi bi-clipboard-heart-fill"></i></div>
-                    หัวใจปกติ จะเต้นอย่างสม่ำเสมอ ด้วยความเร็วที่เปลี่ยนไปตามกิจกรรมของร่างกาย โดยในขณะพักหัวใจจะเต้นประมาณ 60 -100 ครั้งต่อนาที ในขณะเดินหัวใจจะเต้นเร็วขึ้นประมาณ 100 - 120 ครั้งต่อนาที และมากกว่า 120 ครั้งต่อนาทีในขณะวิ่ง อย่างไรก็ตามนักกีฬาหรือผู้ที่ออกกำลังเป็นประจำ อาจมีชีพจรในขณะพักระหว่าง 50 - 60 ครั้งต่อนาที
-                </div>
+            <div class="task-content">
+                <div class="text-title">อัตราออกซิเจน</div>
+                <div class="text-status">105 Spo2</div>
             </div>
+        </div>
+        <!-- <div class="summary-content">
+            <div class="summary-detail text-left">
+                <div style="font-size: 32px;">อัตราการเต้นของหัวใจ<i class="bi bi-clipboard-heart-fill"></i></div>
+                หัวใจปกติ จะเต้นอย่างสม่ำเสมอ ด้วยความเร็วที่เปลี่ยนไปตามกิจกรรมของร่างกาย โดยในขณะพักหัวใจจะเต้นประมาณ
+                60 -100 ครั้งต่อนาที ในขณะเดินหัวใจจะเต้นเร็วขึ้นประมาณ 100 - 120 ครั้งต่อนาที และมากกว่า 120
+                ครั้งต่อนาทีในขณะวิ่ง อย่างไรก็ตามนักกีฬาหรือผู้ที่ออกกำลังเป็นประจำ อาจมีชีพจรในขณะพักระหว่าง 50 - 60
+                ครั้งต่อนาที
+            </div>
+        </div> -->
     </div>
 </div>

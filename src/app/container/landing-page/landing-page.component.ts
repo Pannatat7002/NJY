@@ -52,4 +52,7 @@ timeOutLoading:boolean = false;
       this.timeout = false
     })
   }
+  onNextPaths(paths:string){
+    this.selectMode = paths
+  }
 }

@@ -37,21 +37,21 @@
             </div>
 
             <div class="health-insights p-2">
-                <div (click)="onNext()" class="insight-show" style="background: #007bff80;box-shadow: 3px 3px 10px #007bff80;">
+                <div (click)="onNextPaths('heart rate')" class="insight-show" style="background: #e64b5a;">
                     <div class="content-title">
-                        <div class="title">ความดันโลหิต</div>
-                        <div><i class="bi bi-graph-up"></i></div>
-                    </div>
-                </div>
-                <div class="insight-show" style="background: #f3506c;box-shadow: 3px 3px 10px #f3506c;">
-                    <div class="content-title">
-                        <div class="title">อัตราการเต็นหัวใจ</div>
+                        <div class="title">อัตราการเต็นหัวใจ<i class="bi bi-arrows-angle-expand"></i></div>
                         <div><i class="bi bi-bar-chart-line"></i></div>
                     </div>
                 </div>
-                <div class="insight-show" style="background: #84cc16;box-shadow: 3px 3px 10px #84cc16;">
+                <div (click)="onNextPaths('heart rate')" class="insight-show" style="background: #007bff80;">
                     <div class="content-title">
-                        <div class="title">อัตราออกซิเจน</div>
+                        <div class="title">ความดันโลหิต<i class="bi bi-arrows-angle-expand"></i></div>
+                        <div><i class="bi bi-graph-up"></i></div>
+                    </div>
+                </div>
+                <div (click)="onNextPaths('heart rate')" class="insight-show" style="background: #72ce5d;">
+                    <div class="content-title">
+                        <div class="title">อัตราออกซิเจน<i class="bi bi-arrows-angle-expand"></i></div>
                         <i class="bi bi-water"></i>
                     </div>
                 </div>
@@ -87,13 +87,13 @@
         <div class="tab-appointment">
             <div class="pl-3 pr-3"
                 style="display: flex;justify-content: space-between;font-weight: 600;">
-                <span>กำหนดการต่างๆ 0+</span>
+                <span>แนะนำ</span>
                 <i class="bi bi-three-dots"></i>
             </div>
 
             <div class="table-appointment p-2" style="min-height: 0;margin-bottom: 10vh;">
                 <div  class="text-center" style="color: #adb5bd;">
-                    Emtry
+                    ไม่พบรายการ
                 </div>
             </div>
         </div>

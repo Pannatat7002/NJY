@@ -21,9 +21,9 @@
 </div> -->
 
 <div class="container-fluid">
+  <app-home-page (outPaths)="onNextPaths($event)" [hidden]="selectMode !== 'home'"></app-home-page>
+  <app-status-page (onBackPath)="onNextPaths($event)" [hidden]="selectMode !== 'heart rate'"></app-status-page>
   <app-main-page *ngIf="selectMode === 'post'"></app-main-page>
-  <app-home-page *ngIf="selectMode === 'home'"></app-home-page>
-  <app-status-page *ngIf="selectMode === 'status'"></app-status-page>
   <app-history-page *ngIf="selectMode === 'profile'" [_userProfile]="userProfile" [_timeout]="timeout"></app-history-page>
 </div>
 
@@ -39,9 +39,9 @@
       <div (click)="selectMode = 'post'" [ngStyle]="{'opacity': selectMode === 'post' ? '1' : '0.7' }" >
         <i class="bi bi-bar-chart-fill"></i>
       </div>
-      <div (click)="selectMode = 'status'" [ngStyle]="{'opacity': selectMode === 'status' ? '1' : '0.7' }" >
+      <!-- <div (click)="selectMode = 'status'" [ngStyle]="{'opacity': selectMode === 'status' ? '1' : '0.7' }" >
         <i class="bi bi-activity"></i>
-      </div>
+      </div> -->
       <div (click)="selectMode = 'profile'" [ngStyle]="{'opacity': selectMode === 'profile' ? '1' : '0.7' }" >
         <i class="bi bi-person-fill"></i>
       </div>

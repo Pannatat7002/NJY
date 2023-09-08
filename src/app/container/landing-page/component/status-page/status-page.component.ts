@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 import { ChartData } from 'chart.js';
 
 @Component({
@@ -17,6 +17,9 @@ export class StatusPageComponent implements OnInit {
   barChartPlugins = [];
   mouthNow:any
   barChartData: any
+  timeOutLoading:boolean = false;
+  @Output() onBackPath = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit(): void {
@@ -34,7 +37,7 @@ export class StatusPageComponent implements OnInit {
     this.mouthNow = this.getCurrentMonth().month
     this.barChartData = [
     { data: [65, 59, 80, 81, 56, 55, 40,65, 59, 80, 81, 56, 55, 40], label: 'BP' },
-    { data: [28, 48, 40, 19, 86, 27, 90,65, 59, 80, 81, 56, 55, 40], label: 'Spo2' },
+    // { data: [28, 48, 40, 19, 86, 27, 90,65, 59, 80, 81, 56, 55, 40], label: 'Spo2' },
   ];
   }
 
@@ -58,5 +61,15 @@ export class StatusPageComponent implements OnInit {
       month: currentMonth,
       days: daysArray
     };
+  }
+
+  loading(event:any){
+    console.log('event',event);
+    this.timeOutLoading = event
+  }
+
+  onBack() {
+    console.log('onBack');
+    this.onBackPath.emit('home')
   }
 }

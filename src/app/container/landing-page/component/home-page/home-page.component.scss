@@ -96,33 +96,37 @@
                 // height: 230px;
                 display: block;
                 overflow-x: scroll;
-            
+                scroll-behavior: smooth;
                 .insight-show {
+                    font-weight: 500;
                     display: inline-block;
-                    margin: 8px;
-                    height: 138px;
-                    width: 168px;
+                    margin: 3px;
+                    height: 120px;
+                    width: 165px;
                     background: #e9ecef;
                     border-radius: 14px;
                     justify-content: center;
                     align-items: center;
-            
+                    
                     .content-title {
                         text-align: center;
                         display: grid;
-                        padding: 18px;
+                        padding: 8px;
                         color: #FFF;
             
                         .title {
-                            text-align: left;
+                            display: flex;
+                            justify-content: space-between;
                             font-size: 18px;
-                            // margin: 10px;
-                            margin-bottom: 1rem;
+                            margin-bottom: 1rem;   
+                            i{
+                                font-size: 12px;
+                            }
                         }
             
                         i {
                             // padding: 18px;
-                            font-size: 60px;
+                            font-size: 50px;
                         }
                     }
                 }
@@ -139,6 +143,7 @@
                 max-height: 29vh;
                 background: #FFF;
                 overflow-y: scroll;
+                scroll-behavior: smooth;
                 box-shadow: 3px 3px 10px #c5c5c5;
                 margin: 12px;
                 border-radius: 38px;

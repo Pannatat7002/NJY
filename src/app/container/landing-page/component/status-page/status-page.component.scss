@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'db_heavent_regular';
+    src: url('../../../../../assets/scss/fonts/DB_Heavent_Cond_v3.2.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
 canvas{
     background-color: #fafafa;
     border-radius: 18px;
@@ -6,6 +12,16 @@ canvas{
     display: flex;
     height: 80vh;
     width: 100%;
+    .butBack {
+        color: #2F3C33;
+        font-size: 28px;
+        height: auto;
+        width: 100%;
+        margin: 15px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
 }
 
 .spinner-grow {
@@ -16,15 +32,17 @@ canvas{
 
 .datetab {
     display: flex;
-    justify-content: center;
-    height: 53px;
+    justify-content: space-around;
+    // height: 53px;
+    border-radius: 32px;
+    border: 2px solid #6c757d;
     span {
         font-size: 24px;
-        color: black;
-        margin: 10px 10px;
+        color: #6c757d;
+        // margin: 10px 10px;
         padding: 5px;
         width: auto;
-        border-bottom: 2px solid rgb(30, 136, 229);
+        // border-bottom: 2px solid rgb(30, 136, 229);
     }
 }
 
