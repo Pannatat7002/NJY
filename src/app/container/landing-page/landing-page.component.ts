@@ -11,6 +11,7 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class LandingPageComponent implements OnInit {
 // selectMode:string = "status"
+// selectMode:string = "home"
 selectMode:string = "home"
 userProfile:any
 timeout:boolean = true;
@@ -33,7 +34,6 @@ timeOutLoading:boolean = false;
   }
 
   loading(event:any){
-    console.log('event',event);
     this.timeOutLoading = event
   }
 

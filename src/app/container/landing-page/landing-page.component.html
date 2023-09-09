@@ -24,7 +24,8 @@
   <app-home-page (outPaths)="onNextPaths($event)" [hidden]="selectMode !== 'home'"></app-home-page>
   <app-status-page (onBackPath)="onNextPaths($event)" [hidden]="selectMode !== 'heart rate'"></app-status-page>
   <app-main-page *ngIf="selectMode === 'post'"></app-main-page>
-  <app-history-page *ngIf="selectMode === 'profile'" [_userProfile]="userProfile" [_timeout]="timeout"></app-history-page>
+  <app-history-page (onBackPath)="onNextPaths($event)" *ngIf="selectMode === 'profile'" [_timeout]="timeout"></app-history-page>
+  <!-- <app-history-page *ngIf="selectMode === 'profile'" [_userProfile]="userProfile" [_timeout]="timeout"></app-history-page> -->
 </div>
 
 
