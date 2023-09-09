@@ -30,7 +30,7 @@ export class MainPageComponent implements OnInit {
       this.timeout = false;
       this.checkScroll()
     }, 500);
-    console.log('userProfies', this.userProfies);
+    // console.log('userProfies', this.userProfies);
   }
 
   scrollToTop() {
@@ -68,7 +68,7 @@ export class MainPageComponent implements OnInit {
   }
 
   selectType(item: string) {
-    console.log('Select', item);
+    // console.log('Select', item);
     if (item !== this.typeShow) {
       this.timeout = true
       this.typeShow = item
@@ -91,7 +91,7 @@ export class MainPageComponent implements OnInit {
         data.forEach((res:any) => {
           this.userProfies.push(res)        
         });
-        console.log('this.userProfies',this.userProfies);
+        // console.log('this.userProfies',this.userProfies);
       }
       this.checkScroll()
     })

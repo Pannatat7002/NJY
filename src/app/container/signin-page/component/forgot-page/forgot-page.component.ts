@@ -19,19 +19,19 @@ export class ForgotPageComponent implements OnInit {
   }
 
   loading(event: any) {
-    console.log('event', event);
+    // console.log('event', event);
     this.timeOutLoading = event
   }
 
   closeForGet() {
-    console.log('closeForGet');
+    // console.log('closeForGet');
     this.closeforGet.emit(false)
   }
 
   forget(velue: any) {
     const auth = getAuth();
-    console.log('forget auth', auth);
-    console.log('data', velue.email);
+    // console.log('forget auth', auth);
+    // console.log('data', velue.email);
     if (velue.email) {
       sendPasswordResetEmail(auth, velue.email).then(() => {
         this.closeForGet()

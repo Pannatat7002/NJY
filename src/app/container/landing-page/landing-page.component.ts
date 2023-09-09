@@ -24,7 +24,7 @@ timeOutLoading:boolean = false;
 
   ngOnInit(): void {
     const Token = this.cookieService.get('accessToken')
-    if(!Token){
+    if(!Token|| Token === undefined){
       this.router.navigate([''])
     } else {
       this.userProfile = JSON.parse(this.cookieService.get('userProfile'))    

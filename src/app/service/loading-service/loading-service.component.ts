@@ -13,7 +13,7 @@ export class LoadingServiceComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(() => {    
-      console.log('timeOutLoading',this.timeOutLoading);
+      // console.log('timeOutLoading',this.timeOutLoading);
       
       this.timeOutLoading.emit(true)
       // this.timeout = false;

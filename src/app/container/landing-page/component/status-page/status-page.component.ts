@@ -26,8 +26,8 @@ export class StatusPageComponent implements OnInit {
     setTimeout(() => {                           // <<<---using ()=> syntax
       this.timeout = false;
     }, 300);
-    console.log('Current Month:', this.getCurrentMonth().month);
-    console.log('Days in Current Month:', this.getCurrentMonth().days);
+    // console.log('Current Month:', this.getCurrentMonth().month);
+    // console.log('Days in Current Month:', this.getCurrentMonth().days);
     this.getCurrentMonth()
     this.getChart()
   }
@@ -64,12 +64,12 @@ export class StatusPageComponent implements OnInit {
   }
 
   loading(event:any){
-    console.log('event',event);
+    // console.log('event',event);
     this.timeOutLoading = event
   }
 
   onBack() {
-    console.log('onBack');
+    // console.log('onBack');
     this.onBackPath.emit('home')
   }
 }
