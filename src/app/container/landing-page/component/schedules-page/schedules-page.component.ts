@@ -36,8 +36,9 @@ export class SchedulesPageComponent implements OnInit {
     // this.days = thaiDate
 
     const selectedDate = new Date(); // ในตัวอย่างนี้เลือกวันที่ปัจจุบัน
-    const dayOfWeek = selectedDate.getDay();
-    this.textdate = thaiDate[dayOfWeek]
+    // const dayOfWeek = selectedDate.getDay();
+    // this.textdate = thaiDate[dayOfWeek]
+    this.textdate = selectedDate.getDay();
 
 
     const currentDate = new Date();

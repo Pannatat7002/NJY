@@ -29,10 +29,7 @@
   <!-- <app-history-page *ngIf="selectMode === 'profile'" [_userProfile]="userProfile" [_timeout]="timeout"></app-history-page> -->
 </div>
 
-
-
-
-<Nav class="navbar-down fixed-bottom">
+<Nav class="navbar-down fixed-bottom container-xl">
   <div class="content-topic">
     <div class="content">
       <div (click)="selectMode = 'home'" [ngStyle]="{'opacity': selectMode === 'home' ? '1' : '0.7' }" >
@@ -53,5 +50,8 @@
     </div>
   </div>
 </Nav>
+
+
+
 
 </html>

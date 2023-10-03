@@ -3,20 +3,21 @@
     // height: 80vh;
     width: 100%;
     padding: 0;
+    // background: #92c7ff;
+    background-image: url('../../../../../assets/images/icons/css-background-image-linear-gradient.webp');
 
     .header-title {
-        background: #007bff;
-        // background: #86c02d;
         height: auto;
-        border-radius: 0px 0px 30px 30px;
         display: grid;
         position: relative;
-        color: #FFF;
+        text-align: center;
         overflow: hidden;
+        font-size: 32px;
+        padding-top: 12px;
         .butBack {
             font-size: 28px;
             height: auto;
-            margin: 15px;
+            // margin: 15px;
             display: flex;
         }
 
@@ -64,14 +65,15 @@
 
     .schedules-header{
         display: flex;
-        // justify-content: space-between;
         justify-content: center;
         align-items: center;
-        font-size: 24px;
+        font-size: 26px;
+        // background: #FFF;
         font-weight: 500;
-        margin: 14px;
+        // padding: 12px;
+        border-bottom: 2px solid #0000008f;
         div{
-            padding: 0px 27px;
+            padding: 0px 24px;
         }
         i{
             color: #86c02d;
@@ -79,7 +81,8 @@
     }
     .schedules{
         color: #000000;
-        height: 60vh;
+        // height: 70vh;
+        // height: 60vh;
         position: relative;
         overflow: scroll;
         display: grid;
@@ -92,12 +95,12 @@
             justify-content: center;
             // height: 60vh;
             // overflow: scroll;
-            .schedules-timestamp{
-                margin: 2rem;
-                // opacity: 0.3;
-                border-left: 2px #545b62 dashed;
-                margin-right: 2rem;
-            }
+            // .schedules-timestamp{
+            //     margin: 0rem 2rem;
+            //     // opacity: 0.3;
+            //     border-left: 2px #545b62 dashed;
+            //     margin-right: 2rem;
+            // }
 
             // .schedules-box{
                 // display: inline-block;
@@ -110,9 +113,9 @@
                     align-items: start;
                     height: auto;
                     min-width: 260px;
-                    // width: 260px;
+                    opacity: 0.9;
                     background: #FFF;
-                    border-radius: 24px;
+                    border-radius: 12px;
                     padding: 8px;
                     margin-bottom: 24px;
                     // box-shadow: 12px 12px 10px darkgray;
@@ -128,7 +131,8 @@
                         i{
                             opacity: 0.8;
                             padding: 8px;
-                            color: #545b62;
+                            color: #000000;
+                            // color: #545b62;
                         }
                         display: block;
                     }
@@ -149,6 +153,7 @@
                             color: mediumblue;
                             display: flex;
                             i{
+                                // display: none;
                                 padding: 5px;
                                 font-size: 18px;
                             }
@@ -159,10 +164,11 @@
                     }
                     .timeStamp{
                         position: absolute;
-                        left: -4rem;
-                        background: #f0f2f5;
+                        right: 9px;
+                        font-size: 18px;
                         padding: 5px;
-                        color: #545b62;
+                        color: #212529;
+                        border-radius: 76px;
                     }
                 }
             // }
