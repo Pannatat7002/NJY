@@ -1,0 +1,171 @@
+.container-lg {
+    // display: flex;
+    // height: 80vh;
+    width: 100%;
+    padding: 0;
+
+    .header-title {
+        background: #007bff;
+        // background: #86c02d;
+        height: auto;
+        border-radius: 0px 0px 30px 30px;
+        display: grid;
+        position: relative;
+        color: #FFF;
+        overflow: hidden;
+        .butBack {
+            font-size: 28px;
+            height: auto;
+            margin: 15px;
+            display: flex;
+        }
+
+        .month {
+            text-align: center;
+            font-size: 32px;        
+        }
+
+        .tab-date {
+            display: flex;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+            .title-date{
+                font-size: 32px;
+            }
+            .box-date {
+                display: inline-block;
+                justify-content: center;
+                align-items: center;
+                .select-date {
+                    display: grid;
+                    text-align: center;
+                    font-size: 32px;
+                    height: 68px;
+                    width: 50px;
+                    background: #00000036;
+                    // justify-content: center;
+                    border-radius: 14px;
+                    align-items: center;
+                    margin: 0px 6px;
+                    i {
+                        opacity: 1;
+                        color: #86c02d;  
+                        font-size: 24px;
+                    }
+
+                    span {
+                        opacity: 1;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .schedules-header{
+        display: flex;
+        // justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        font-weight: 500;
+        margin: 14px;
+        div{
+            padding: 0px 27px;
+        }
+        i{
+            color: #86c02d;
+        }
+    }
+    .schedules{
+        color: #000000;
+        height: 60vh;
+        position: relative;
+        overflow: scroll;
+        display: grid;
+        margin: 14px;
+        margin-bottom: 2rem;
+        .schedules-content{
+            color: #000000;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            // height: 60vh;
+            // overflow: scroll;
+            .schedules-timestamp{
+                margin: 2rem;
+                // opacity: 0.3;
+                border-left: 2px #545b62 dashed;
+                margin-right: 2rem;
+            }
+
+            // .schedules-box{
+                // display: inline-block;
+                // justify-content: center;
+                // align-self: start;
+                .schedules-note{
+                    position: relative;
+                    display: flex;
+                    // justify-content: space-between;
+                    align-items: start;
+                    height: auto;
+                    min-width: 260px;
+                    // width: 260px;
+                    background: #FFF;
+                    border-radius: 24px;
+                    padding: 8px;
+                    margin-bottom: 24px;
+                    // box-shadow: 12px 12px 10px darkgray;
+                    
+                    .task-title{
+                        .img{
+                            height: 50px !important;
+                            width: 50px !important;
+                            // background: #5c5c5c;
+                            border-radius: 12px;
+                            font-size: 50px;
+                        }
+                        i{
+                            opacity: 0.8;
+                            padding: 8px;
+                            color: #545b62;
+                        }
+                        display: block;
+                    }
+                    .detail-title{
+                        font-size: 24px;
+                        // padding: 5px;
+                        display: inline-block;
+                        // width: 195px;
+                        text-wrap: wrap;
+                        // height: 50px;
+                        // background: #5c5c5c;
+                        // border-radius: 15px;
+                        button {
+                            border: none;
+                            background: none;
+                            justify-content: center;
+                            align-items: center;
+                            color: mediumblue;
+                            display: flex;
+                            i{
+                                padding: 5px;
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                    .image{
+
+                    }
+                    .timeStamp{
+                        position: absolute;
+                        left: -4rem;
+                        background: #f0f2f5;
+                        padding: 5px;
+                        color: #545b62;
+                    }
+                }
+            // }
+        }
+    }
+}

@@ -11,8 +11,8 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class LandingPageComponent implements OnInit {
 // selectMode:string = "status"
-// selectMode:string = "home"
 selectMode:string = "home"
+// selectMode:string = "schedules"
 userProfile:any
 timeout:boolean = true;
 timeOutLoading:boolean = false;
@@ -24,6 +24,7 @@ timeOutLoading:boolean = false;
   ) { }
 
   ngOnInit(): void {
+    this.getPosition()
     const Token = this.cookieService.get('accessToken')
     if(!Token|| Token === undefined){
       this.router.navigate([''])
@@ -54,5 +55,16 @@ timeOutLoading:boolean = false;
   }
   onNextPaths(paths:string){
     this.selectMode = paths
+  }
+
+  getPosition(){
+    console.log('lat');
+    
+      navigator.geolocation.getCurrentPosition(resp => {
+        console.log('lng', resp.coords.longitude);
+        console.log('lat',resp.coords.latitude);
+                },
+        err => {
+        });
   }
 }

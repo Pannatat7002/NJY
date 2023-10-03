@@ -22,9 +22,10 @@
 
 <div class="container-fluid">
   <app-home-page (outPaths)="onNextPaths($event)" [hidden]="selectMode !== 'home'"></app-home-page>
-  <app-status-page (onBackPath)="onNextPaths($event)" [hidden]="selectMode !== 'heart rate'"></app-status-page>
   <app-main-page *ngIf="selectMode === 'post'"></app-main-page>
-  <app-history-page (onBackPath)="onNextPaths($event)" *ngIf="selectMode === 'profile'" [_timeout]="timeout"></app-history-page>
+  <app-history-page (onBackPath)="onNextPaths($event)" [hidden]="selectMode !== 'profile'" [_timeout]="timeout"></app-history-page>
+  <app-status-page (onBackPath)="onNextPaths($event)" [hidden]="selectMode !== 'heart rate'"></app-status-page>
+  <app-schedules-page (onBackPath)="onNextPaths($event)" *ngIf="selectMode === 'schedules'"></app-schedules-page>
   <!-- <app-history-page *ngIf="selectMode === 'profile'" [_userProfile]="userProfile" [_timeout]="timeout"></app-history-page> -->
 </div>
 
@@ -37,9 +38,12 @@
       <div (click)="selectMode = 'home'" [ngStyle]="{'opacity': selectMode === 'home' ? '1' : '0.7' }" >
         <i class="bi bi-house-fill"></i>
       </div>
-      <div (click)="selectMode = 'post'" [ngStyle]="{'opacity': selectMode === 'post' ? '1' : '0.7' }" >
+      <div (click)="selectMode = 'schedules'" [ngStyle]="{'opacity': selectMode === 'schedules' ? '1' : '0.7' }" >
         <i class="bi bi-bar-chart-fill"></i>
       </div>
+      <!-- <div (click)="selectMode = 'post'" [ngStyle]="{'opacity': selectMode === 'post' ? '1' : '0.7' }" >
+        <i class="bi bi-bar-chart-fill"></i>
+      </div> -->
       <!-- <div (click)="selectMode = 'status'" [ngStyle]="{'opacity': selectMode === 'status' ? '1' : '0.7' }" >
         <i class="bi bi-activity"></i>
       </div> -->

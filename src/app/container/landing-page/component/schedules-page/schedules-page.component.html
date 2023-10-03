@@ -1,0 +1,83 @@
+<div class="container-lg">
+    <div class="header-title">
+        <div (click)="onBack()" class="butBack bi bi-backspace" style="cursor: pointer;">
+            <div style="margin-left: 18px;">ข้อมูล ตารางเวลาคุณ</div>
+        </div>
+        <div class="month">เลือกวันที่</div>
+        <div class="tab-date">
+            <!-- <div class="title-date">เลือกวัน</div> -->
+            <div *ngFor="let date of days; let i = index" class="box-date">
+                <div class="select-date">
+                    <!-- <span class="bi bi-dot"></span> -->
+                    <!-- <span>{{textdate}}</span> -->
+                    <span>{{date}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="schedules-header">
+        <div>วันนี้</div>
+        <div>เดือน : {{month}}</div>
+        <div>ใหม่ล่าสุด</div>
+    </div>
+    <div class="schedules">
+        <div class="schedules-content">
+            <div class="schedules-timestamp">
+            </div>
+            <div class="schedules-box">
+                <div class="schedules-note">
+                    <div class="task-title">
+                        <i class="bi bi-alarm-fill img"></i>
+                    </div>
+                    <div class="detail-title">
+                        <h2 class="title-header text-left">ตื่นนอน</h2>
+                        <div class="titile-body">จำวัน 8 ชั่วโมง นอน 8 ชั่วโมง</div>
+                        <!-- <button class="text-right">
+                            แสดงรูปภาพเพิ่มเติม<i class="bi bi-images"></i>
+                        </button> -->
+                    </div>
+                    <span class="timeStamp">
+                        <i class="bi bi-clock-fill">10:00น</i>
+                    </span>
+                </div>
+                <div class="schedules-note">
+                    <div class="task-title">
+                        <i class="bi bi-clipboard2-pulse-fill img"></i>
+                    </div>
+                    <div class="detail-title">
+                        <h2 class="title-header text-left">ตรวจ HERATRATE</h2>
+                        <div class="titile-body">โดยแบ่งเป็นช่วงเวลาทำงาน 8 ชั่วโมง เวลาส่วนตัวรวมถึงกิจวัตรประจำวัน 8 ชั่วโมง นอน 8 ชั่วโมง</div>
+                    </div>
+                    <span class="timeStamp">
+                        <i class="bi bi-clock-fill">11:00น</i>
+                    </span>
+                </div>
+                <div class="schedules-note">
+                    <div class="task-title">
+                        <i class="bi bi-cup-hot img"></i>
+                    </div>
+                    <div class="detail-title">
+                        <h2 class="title-header text-left">กินกาแฟ</h2>
+                        <div class="titile-body">โดยแบ่งเป็นช่วงเวลาทำงาน 8 ชั่วโมง เวลาส่วนตัวรวมถึงกิจวัตรประจำวัน 8 ชั่วโมง นอน 8 ชั่วโมง</div>
+                        <!-- <button class="text-right">
+                            แสดงรูปภาพเพิ่มเติม<i class="bi bi-images"></i>
+                        </button> -->
+                    </div>
+                    <span class="timeStamp">
+                        <i class="bi bi-clock-fill">13:00น</i>
+                    </span>
+                </div>
+                <div class="schedules-note">
+                    <div class="task-title">
+                        <i class="bi bi-capsule img"></i>
+                    </div>
+                    <div class="detail-title">
+                        <h2 class="title-header text-left">กจจกรมกลุ่ม</h2>
+                        <div class="titile-body">โดยแบ่งเป็นช่วงเวลาทำงาน 8 ชั่วโมง เวลาส่วนตัวรวมถึงกิจวัตรประจำวัน 8 ชั่วโมง นอน 8 ชั่วโมง</div>                    </div>
+                    <span class="timeStamp">
+                        <i class="bi bi-clock-fill">13:00น</i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>

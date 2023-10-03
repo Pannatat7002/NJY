@@ -21,7 +21,8 @@ import { CookieService } from 'ngx-cookie-service';
 import { NgChartsModule } from 'ng2-charts';
 import { SplashComponent } from './service/splash-service/splash/splash.component';
 import { ForgotPageComponent } from './container/signin-page/component/forgot-page/forgot-page.component';
-import { HomePageComponent } from './container/landing-page/component/home-page/home-page.component'; // นำเข้า ChartsModule
+import { HomePageComponent } from './container/landing-page/component/home-page/home-page.component';
+import { SchedulesPageComponent } from './container/landing-page/component/schedules-page/schedules-page.component'; // นำเข้า ChartsModule
 
 // import { MainPageComponent } from './container/Landing-page/component/main-page/main-page.component';
 
@@ -37,7 +38,8 @@ import { HomePageComponent } from './container/landing-page/component/home-page/
     StatusPageComponent,
     SplashComponent,
     ForgotPageComponent,
-    HomePageComponent
+    HomePageComponent,
+    SchedulesPageComponent
   ],
   imports: [
     BrowserModule,
