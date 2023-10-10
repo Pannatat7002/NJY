@@ -1,13 +1,13 @@
 <div class="container-xl p-0">
     <div class="content-header p-2">
-        <div class="content-bar">
+        <!-- <div class="content-bar">
             <span>
                 <i class="bi bi-calendar3"></i>
                 เสาร์, 25 มกราคม 2556</span>
             <span>
                 <i class="bi bi-bell-fill"></i>
             </span>
-        </div>
+        </div> -->
         <div class="content-profile">
             <div class="image">
                 <i class="bi bi-person-bounding-box"></i>
@@ -37,22 +37,28 @@
             </div>
 
             <div class="health-insights p-2">
-                <div (click)="onNextPaths('heart rate')" class="insight-show" style="background: #e64b5a;">
+                <div (click)="onNextPaths('heart rate')" class="insight-show" >
                     <div class="content-title">
                         <div class="title">อัตราการเต็นหัวใจ<i class="bi bi-arrows-angle-expand"></i></div>
                         <div><i class="bi bi-bar-chart-line"></i></div>
                     </div>
                 </div>
-                <div (click)="onNextPaths('heart rate')" class="insight-show" style="background: #007bff80;">
+                <div (click)="onNextPaths('heart rate')" class="insight-show" >
                     <div class="content-title">
                         <div class="title">ความดันโลหิต<i class="bi bi-arrows-angle-expand"></i></div>
                         <div><i class="bi bi-graph-up"></i></div>
                     </div>
                 </div>
-                <div (click)="onNextPaths('heart rate')" class="insight-show" style="background: #72ce5d;">
+                <div (click)="onNextPaths('heart rate')" class="insight-show">
                     <div class="content-title">
                         <div class="title">อัตราออกซิเจน<i class="bi bi-arrows-angle-expand"></i></div>
                         <i class="bi bi-water"></i>
+                    </div>
+                </div>
+                <div (click)="onNextPaths('schedules')" class="insight-show">
+                    <div class="content-title">
+                        <div class="title">การจัดยา<i class="bi bi-arrows-angle-expand"></i></div>
+                        <i class="bi bi-capsule"></i>
                     </div>
                 </div>
             </div>
@@ -60,8 +66,8 @@
 
         <div class="tab-appointment">
             <div class="pl-3 pr-3"
-                style="display: flex;justify-content: space-between;font-weight: 600;">
-                <span>กำหนดการต่างๆ 4+</span>
+                style="display: flex;justify-content: space-between;">
+                <span>กิจกรรมนันทนาการ</span>
                 <i class="bi bi-three-dots"></i>
             </div>
 
@@ -86,8 +92,8 @@
 
         <div class="tab-appointment">
             <div class="pl-3 pr-3"
-                style="display: flex;justify-content: space-between;font-weight: 600;">
-                <span>แนะนำ</span>
+                style="display: flex;justify-content: space-between;">
+                <span>กำหนดการต่างๆ</span>
                 <i class="bi bi-three-dots"></i>
             </div>
 
