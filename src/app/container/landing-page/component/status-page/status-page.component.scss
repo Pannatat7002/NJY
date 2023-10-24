@@ -5,19 +5,20 @@
     font-style: normal;
   }
 canvas{
-    background-color: #fafafa;
-    border-radius: 18px;
+    border-radius: 12px;
+    background-color: #FAFAFA;
 }
 .container-lg {
     display: flex;
     height: 80vh;
-    width: 100%;
+    // width: 100%;
+    padding: 0px;
     .butBack {
         color: #2F3C33;
         font-size: 28px;
         height: auto;
-        width: 100%;
-        margin: 15px;
+        // width: 100%;
+        padding: 15px;
         display: flex;
         justify-content: left;
         align-items: center;
@@ -36,6 +37,7 @@ canvas{
     // height: 53px;
     border-radius: 32px;
     border: 2px solid #6c757d;
+    margin: 0px 12px;
     span {
         font-size: 24px;
         color: #6c757d;
@@ -47,21 +49,18 @@ canvas{
 }
 
 .summary {
-    display: flex;
-    justify-content: left;
+    // display: flex;
+    // justify-content: left;
+    display: grid;
+    grid-template-columns: 50% 50%;
     width: 100%;
     overflow: auto;
     white-space: nowrap;    
+    padding-top: 12px;
     .task-content {
-        border: 1px solid #f2f4f6;
-        width: 200px;
-        height: 80px;
-        border-radius: 16px;
-        padding: 0px 20px;
-        margin: 20px 6px;
         margin-bottom: 0;
-        color: #38454c;
-        background-color: #fafafa;
+        // color: #38454c;
+        background-color: rgba(0, 0, 0, 0.0784313725);
         display: inline-block;
         .text-title {
             font-size: 26px;
@@ -73,7 +72,7 @@ canvas{
         }
     }
     .active{
-        background-color: #36a2eb;
+        background-color: #dc3545;
         color: #FFF;
     }
 }
@@ -97,5 +96,37 @@ canvas{
         right: 145px;
         font-size: 35px;
         color: #ea4a4a;
+    }
+}
+
+.tab-appointment{
+    font-size: 24px;
+    // padding-top: 18px;
+    // font-weight: 600;
+    letter-spacing: 1px;
+    padding-bottom: 3rem;
+    .table-appointment{
+        display: grid;
+        // min-height: 10vh;
+        // max-height: 29vh;
+        height: 85px;
+        background: #FFF;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        box-shadow: 3px 3px 10px #c5c5c5;
+        margin: 12px;
+        border-radius: 24px;
+        align-items: center;
+        .content-appointment{
+            margin: 5px;
+            // height: 96px;
+            height: 54px;
+            // width: 100%;
+            background: #F0F2F5;
+            border-radius: 12px;
+        }
+        .title-appointment{
+
+        }
     }
 }

@@ -36,7 +36,19 @@ export class StatusPageComponent implements OnInit {
     this.barChartLabels = this.getCurrentMonth().days
     this.mouthNow = this.getCurrentMonth().month
     this.barChartData = [
-    { data: [65, 59, 80, 81, 56, 55, 40,65, 59, 80, 81, 56, 55, 40], label: 'BP' },
+    { data: [65, 59, 80, 81, 56, 55, 40,65, 59, 80, 81, 56, 55, 40], 
+      label: 'BP',
+      borderColor: '#dc3545',
+      backgroundColor	:"#dc3545",
+      // tension: 0.2,
+      // fill: false,
+      pointStyle : 'dash',
+      hitRadius	: 5,
+      borderWidth:3,
+      bodyColor:'#38454c',
+      display:true
+    },
+    
     // { data: [28, 48, 40, 19, 86, 27, 90,65, 59, 80, 81, 56, 55, 40], label: 'Spo2' },
   ];
   }

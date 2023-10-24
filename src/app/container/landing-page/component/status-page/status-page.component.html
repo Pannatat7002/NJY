@@ -2,16 +2,18 @@
 <div [hidden]="!timeOutLoading" class="container-lg">
 
     <div style="display: block; justify-content: center;width: 100%;text-align: center;">
-        <div (click)="onBack()" class="butBack bi bi-backspace" style="cursor: pointer;">
-            <span style="margin-left: 18px;">อัตราการเต้นของหัวใจ</span>
+        <div style="background-color: #FAFAFA;">
+            <div (click)="onBack()" class="butBack bi bi-backspace" style="cursor: pointer;">
+                <span style="margin-left: 18px;">อัตราการเต้นของหัวใจ</span>
+            </div>
+            <div class="datetab">
+                <span>1 day</span>
+                <span>1 week</span>
+                <span>1 month</span>
+                <span>All</span>
+            </div>
+            <div style="width: 100%;margin-bottom: 0px;font-size: 28px;height: 30px;color: #343a40;">เดือน : {{mouthNow}}</div>
         </div>
-        <div class="datetab">
-            <span>1 day</span>
-            <span>1 week</span>
-            <span>1 month</span>
-            <span>All</span>
-        </div>
-        <div style="width: 100%;margin-bottom: 6px;font-size: 28px;height: 30px;color: #343a40;">เดือน : {{mouthNow}}</div>
         <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
             [plugins]="barChartPlugins" [legend]="barChartLegend" [type]="barChartType">
         </canvas>
@@ -29,14 +31,29 @@
                 <div class="text-status">105 Spo2</div>
             </div>
         </div>
-        <!-- <div class="summary-content">
-            <div class="summary-detail text-left">
-                <div style="font-size: 32px;">อัตราการเต้นของหัวใจ<i class="bi bi-clipboard-heart-fill"></i></div>
-                หัวใจปกติ จะเต้นอย่างสม่ำเสมอ ด้วยความเร็วที่เปลี่ยนไปตามกิจกรรมของร่างกาย โดยในขณะพักหัวใจจะเต้นประมาณ
-                60 -100 ครั้งต่อนาที ในขณะเดินหัวใจจะเต้นเร็วขึ้นประมาณ 100 - 120 ครั้งต่อนาที และมากกว่า 120
-                ครั้งต่อนาทีในขณะวิ่ง อย่างไรก็ตามนักกีฬาหรือผู้ที่ออกกำลังเป็นประจำ อาจมีชีพจรในขณะพักระหว่าง 50 - 60
-                ครั้งต่อนาที
+        <div class="tab-appointment">
+            <div class="pl-3 pr-3"
+                style="display: flex;justify-content: space-between;">
+                <span>ประวัติ</span>
+                <i class="bi bi-three-dots"></i>
             </div>
-        </div> -->
+            <div class="table-appointment p-2">
+                <div class="content-appointment">
+
+                </div>
+                <div class="content-appointment">
+
+                </div>
+                <div class="content-appointment">
+
+                </div>
+                <div class="content-appointment">
+
+                </div>
+                <!-- <div  class="text-center" style="color: #adb5bd;">
+                    Emtry
+                </div> -->
+            </div>
+        </div>
     </div>
 </div>
