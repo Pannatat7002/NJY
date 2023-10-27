@@ -26,6 +26,8 @@
   <app-history-page (onBackPath)="onNextPaths($event)" [hidden]="selectMode !== 'profile'" [_timeout]="timeout"></app-history-page>
   <app-status-page (onBackPath)="onNextPaths($event)" [hidden]="selectMode !== 'heart rate'"></app-status-page>
   <app-schedules-page (onBackPath)="onNextPaths($event)" *ngIf="selectMode === 'schedules'"></app-schedules-page>
+  <app-oxygen-level-page (onBackPath)="onNextPaths($event)" [hidden]="selectMode !== 'oxygen level'"></app-oxygen-level-page>
+
   <!-- <app-history-page *ngIf="selectMode === 'profile'" [_userProfile]="userProfile" [_timeout]="timeout"></app-history-page> -->
 </div>
 

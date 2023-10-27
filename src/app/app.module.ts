@@ -22,7 +22,8 @@ import { NgChartsModule } from 'ng2-charts';
 import { SplashComponent } from './service/splash-service/splash/splash.component';
 import { ForgotPageComponent } from './container/signin-page/component/forgot-page/forgot-page.component';
 import { HomePageComponent } from './container/landing-page/component/home-page/home-page.component';
-import { SchedulesPageComponent } from './container/landing-page/component/schedules-page/schedules-page.component'; // นำเข้า ChartsModule
+import { SchedulesPageComponent } from './container/landing-page/component/schedules-page/schedules-page.component';
+import { OxygenLevelPageComponent } from './container/landing-page/component/vital-sign-page/oxygen-level-page/oxygen-level-page.component'; // นำเข้า ChartsModule
 
 // import { MainPageComponent } from './container/Landing-page/component/main-page/main-page.component';
 
@@ -39,7 +40,8 @@ import { SchedulesPageComponent } from './container/landing-page/component/sched
     SplashComponent,
     ForgotPageComponent,
     HomePageComponent,
-    SchedulesPageComponent
+    SchedulesPageComponent,
+    OxygenLevelPageComponent
   ],
   imports: [
     BrowserModule,
