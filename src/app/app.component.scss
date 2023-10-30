@@ -7,4 +7,6 @@
 
   .main{
     font-family: db_heavent_regular;
+    zoom: reset; /* สามารถเปลี่ยนเป็นค่าอื่น ๆ เพื่อป้องกันการซูมเข้า */
+    touch-action: none; /* ป้องกันการสัมผัสหน้าจอที่สามารถซูมเข้า */
   }
