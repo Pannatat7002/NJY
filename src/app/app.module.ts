@@ -8,7 +8,7 @@ import { SigninPageComponent } from './container/signin-page/signin-page.compone
 import { StartPageComponent } from './container/start-page/start-page.component';
 import { LandingPageComponent } from './container/landing-page/landing-page.component';
 import { MainPageComponent } from './container/landing-page/component/main-page/main-page.component';
-import { StatusPageComponent } from './container/landing-page/component/status-page/status-page.component';
+import { StatusPageComponent } from './container/landing-page/component/vital-sign-page/status-page/status-page.component';
 import { HistoryPageComponent } from './container/landing-page/component/history-page/history-page.component';
 import { WorkDatabaseService } from './service/work-database.service';
 import { HttpClientModule } from '@angular/common/http';

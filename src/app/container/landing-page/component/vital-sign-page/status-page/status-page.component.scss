@@ -1,18 +1,21 @@
 @font-face {
     font-family: 'db_heavent_regular';
-    src: url('../../../../../assets/scss/fonts/DB_Heavent_Cond_v3.2.ttf');
+    src: url('../../../../../../assets/scss/fonts/DB_Heavent_Cond_v3.2.ttf');
     font-weight: normal;
     font-style: normal;
-  }
-canvas{
+}
+
+canvas {
     border-radius: 12px;
     background-color: #FAFAFA;
 }
+
 .container-lg {
     display: flex;
     height: 80vh;
     // width: 100%;
     padding: 0px;
+
     .butBack {
         color: #2F3C33;
         font-size: 28px;
@@ -34,17 +37,25 @@ canvas{
 .datetab {
     display: flex;
     justify-content: space-around;
-    // height: 53px;
+    align-items: center;    // height: 53px;
     border-radius: 32px;
     border: 2px solid #6c757d;
     margin: 0px 12px;
+    overflow: hidden;
     span {
+        cursor: pointer;
+        // overflow: hidden;
         font-size: 24px;
         color: #6c757d;
         // margin: 10px 10px;
         padding: 5px;
         width: auto;
         // border-bottom: 2px solid rgb(30, 136, 229);
+    }
+    .active{
+        color: black;
+        font-size: 36px;
+        font-weight: 500;
     }
 }
 
@@ -54,30 +65,49 @@ canvas{
     display: grid;
     grid-template-columns: 50% 50%;
     width: 100%;
-    overflow: auto;
-    white-space: nowrap;    
+    overflow: hidden;
+    white-space: nowrap;
     padding-top: 12px;
+
     .task-content {
+        cursor: pointer;
         margin-bottom: 0;
         // color: #38454c;
         background-color: rgba(0, 0, 0, 0.0784313725);
-        display: inline-block;
-        .text-title {
-            font-size: 26px;
-            line-height: 40px;
+        // display: inline-block;
+        display: flex;
+        justify-content: space-between;
+        margin: 3px;
+        border-radius: 6px;
+        .task-box{
+            width: 100%;
+            .text-title {
+                padding: 6px;
+                font-size: 22px;
+                line-height: 40px;
+            }
+    
+            .text-status {
+                font-size: 28px;
+                line-height: 40px;
+            }
         }
-        .text-status {
-            font-size: 28px;
-            line-height: 40px;
+
+        .bi-arrow-down-up {
+            font-size: 22px;
+            width: 50px;
+            display: grid;
+            align-items: center;
         }
     }
-    .active{
+
+    .active {
         background-color: #dc3545;
         color: #FFF;
     }
 }
 
-.summary-content{
+.summary-content {
     width: 100%;
     height: 215px;
     background: #FAFAFA;
@@ -86,11 +116,13 @@ canvas{
     padding: 14px;
     position: relative;
     margin-top: 12px;
-    .summary-detail{
+
+    .summary-detail {
         font-size: 20px;
         color: #38454c;
     }
-    .bi-clipboard-heart-fill{
+
+    .bi-clipboard-heart-fill {
         margin-left: 1rem;
         top: 13px;
         right: 145px;
@@ -99,34 +131,42 @@ canvas{
     }
 }
 
-.tab-appointment{
+.tab-record {
     font-size: 24px;
     // padding-top: 18px;
     // font-weight: 600;
     letter-spacing: 1px;
     padding-bottom: 3rem;
-    .table-appointment{
+
+    .table-record {
         display: grid;
-        // min-height: 10vh;
-        // max-height: 29vh;
-        height: 85px;
+        height: 168px;
         background: #FFF;
         overflow-y: scroll;
         scroll-behavior: smooth;
         box-shadow: 3px 3px 10px #c5c5c5;
-        margin: 12px;
-        border-radius: 24px;
+        border-radius: 12px;
         align-items: center;
-        .content-appointment{
+        margin: 12px;
+        .content-record {
             margin: 5px;
-            // height: 96px;
             height: 54px;
-            // width: 100%;
             background: #F0F2F5;
             border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .title{
+                padding: 18px;
+            }
+            .option-record{
+                i{
+                    cursor: pointer;
+                    padding: 12px;
+                }
+            }
         }
-        .title-appointment{
 
-        }
+        .title-appointment {}
     }
 }

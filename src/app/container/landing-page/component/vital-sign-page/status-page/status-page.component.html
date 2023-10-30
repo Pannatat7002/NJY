@@ -1,0 +1,84 @@
+<app-loading-service *ngIf="!timeOutLoading" (timeOutLoading)="loading($event)"></app-loading-service>
+<div [hidden]="!timeOutLoading" class="container-lg">
+
+    <div style="display: block; justify-content: center;width: 100%;text-align: center;">
+        <div style="background-color: #FAFAFA;">
+            <div (click)="onBack()" class="butBack bi bi-backspace" style="cursor: pointer;">
+                <span style="margin-left: 18px;">อัตราการเต้นของหัวใจ</span>
+            </div>
+            <div class="datetab">
+                <div *ngFor="let date of listDateTime;">
+                    <span (click)="selectDate(date)" [ngClass]="{'active' : _selectDate === date }">{{date}}</span>
+                </div>
+            </div>
+            <div style="width: 100%;margin-bottom: 0px;font-size: 28px;height: 30px;color: #343a40;">เดือน :
+                {{mouthNow}}</div>
+        </div>
+        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+            [plugins]="barChartPlugins" [legend]="barChartLegend" [type]="barChartType">
+        </canvas>
+        <div class="summary">
+            <div *ngFor="let item of listTitle">
+                <div (click)="selectTitle(item)" [ngClass]="{'active' : _selectTitle === item.badge }"
+                    class="task-content">
+                    <div class="task-box">
+                        <div class="text-title">{{item.badge}}</div>
+                        <div class="text-status">{{item.data}}{{item.unit}}</div>
+                    </div>
+                    <div class="bi bi-arrow-down-up"></div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-record">
+            <div class="pl-3 pr-3" style="display: flex;justify-content: space-between;">
+                <span>ประวัติ</span>
+                <i class="bi bi-three-dots"></i>
+            </div>
+            <div class="table-record p-2">
+                <!-- <div class="content-appointment">
+                    ระบบไม่สามารถ ใช้งานได้
+                </div> -->
+                <div *ngFor="let item of listRecord;">
+                    <div class="content-record">
+                        <div class="title">{{item.dateRecord}}</div>
+                        <div *ngIf="item.status" class="option-record">
+                            <i class="bi bi-eye"></i>
+                            <i (click)="_selectRecord = item" class="bi bi-download" data-toggle="modal" data-target="#myModal"></i>
+                        </div>
+                        <div *ngIf="!item.status">
+                            <span>กำลังดำเนินการ...</span>
+                        </div>
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">ยืนยันการดาวน์โหลด</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                {{_selectRecord && _selectRecord.dateRecord}}.PDF
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button (click)="downloadRecord()" type="button" class="btn btn-success" data-dismiss="modal">ดาวน์โหลด</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">ยกเลิก</button>
+            </div>
+
+        </div>
+    </div>
+</div>
