@@ -20,7 +20,7 @@ export class StatusPageComponent implements OnInit {
   barChartData: any
   timeOutLoading: boolean = false;
   _selectTitle: any = 'ขณะหัวใจห้องล่างบีบตัว(SBP)'
-  _selectDate: any = 'สัปดาห์'
+  _selectDate: any = 'week'
   _selectRecord: any
   //ListData
   listTitle: any
@@ -38,25 +38,22 @@ export class StatusPageComponent implements OnInit {
     setTimeout(() => {                           // <<<---using ()=> syntax
       this.timeout = false;
     }, 300);
-    // console.log('Current Month:', this.getCurrentMonth().month);
-    // console.log('Days in Current Month:', this.getCurrentMonth().days);
     this.createDataTitle()
     this.getCurrentMonth()
-    // this.getChart()
   }
 
   getChart(item?: any) {
     // listData = [65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56, 55, 40]
     var days = this.getCurrentMonth().days
     switch (this._selectDate) {
-      case 'สัปดาห์':
+      case 'week':
         this.barChartLabels = days.splice(0, 7)
         break;
-      case 'เดือนปัจบัน':
+      case 'month':
         this.barChartLabels = days.splice(0, 31)
         break;
-      case '3 เดือน':
-        this.barChartLabels = days.splice(0, 93)
+      case 'year':
+        this.barChartLabels = days.splice(0, 12)
         break;
       default:
 
@@ -115,22 +112,23 @@ export class StatusPageComponent implements OnInit {
   }
 
   selectTitle(item: any) {
-    console.log('itemstart', item);
+    // console.log('itemstart', item);
 
-    this._selectTitle = item.badge
+    this._selectTitle = item
     this.getChart(item)
   }
 
   selectDate(item: any) {
     this._selectDate = item
+    this.getChart(this._selectTitle )
   }
 
   createDataTitle() {
-    console.log('(this.userProfile', this.userProfile);
+    // console.log('(this.userProfile', this.userProfile);
 
     // this.queryVitalSigns(this.userProfile.ender)
     this.queryVitalSigns("นายวีระยุทร์ สุธีสรโยธิน")
-    this.listDateTime = ["สัปดาห์", "เดือนปัจบัน", "3 เดือน"]
+    this.listDateTime = ["week", "month", "year"]
     this.listRecord = [
       {
         dateRecord: 'บันทึก 1 ก.ค 2023',
@@ -166,7 +164,7 @@ export class StatusPageComponent implements OnInit {
   }
 
   downloadRecord() {
-    console.log('downloadRecord', this._selectRecord);
+    // console.log('downloadRecord', this._selectRecord);
     window.open(this._selectRecord.link, "_blank");
 
   }
@@ -174,7 +172,7 @@ export class StatusPageComponent implements OnInit {
   queryVitalSigns(userName: string) {
     this.workDataService.queryVitalSigns(userName, this.defaultDateTime).then((res) => {
       var data: any = res.daily_Health_vitality.vital_signs
-      console.log('queryVitalSigns', data);
+      // console.log('queryVitalSigns', data);
       this.listTitle = [
         {
           badge: 'ขณะหัวใจห้องล่างบีบตัว(SBP)',
@@ -198,10 +196,10 @@ export class StatusPageComponent implements OnInit {
         this.listTitle[1]['data'].push(Number(item.dbp) || 0)
         this.listTitle[2]['data'].push(Number(item[" pulse"]) || 0)
       })
-      console.log('this.listTitle', this.listTitle);
+      // console.log('this.listTitle', this.listTitle);
       this.selectTitle(this.listTitle[0])
     }).catch((err) => {
-      console.log('queryVitalSigns err', err);
+      // console.log('queryVitalSigns err', err);
     })
   }
 }

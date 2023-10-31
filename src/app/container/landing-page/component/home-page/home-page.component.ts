@@ -1,4 +1,4 @@
-import { Component, OnInit,Output,EventEmitter } from '@angular/core';
+import { Component, OnInit,Output,EventEmitter,Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,13 +8,16 @@ import { Router } from '@angular/router';
 })
 export class HomePageComponent implements OnInit {
   @Output() outPaths = new EventEmitter<string>();
-
+  @Input() userProfile: any = '-'
+  nameHeader:any
   constructor(
     private router: Router,
 
   ) { }
 
   ngOnInit(): void {
+    console.log('HomePageComponent userProfile',this.userProfile);
+    this.nameHeader = this.userProfile.name
   }
 
   onNextPaths(path:string){

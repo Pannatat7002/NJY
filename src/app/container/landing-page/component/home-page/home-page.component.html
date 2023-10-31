@@ -12,7 +12,8 @@
             <div class="image">
                 <i class="bi bi-person-bounding-box"></i>
             </div>
-            <div class="name">สวัสดี, ปัณณทัต! <br>
+            <!-- <div class="name">สวัสดี, ปัณณทัต! <br> -->
+            <div class="name">สวัสดี, {{nameHeader}}! <br>
                 <div>
                     <span class="first">
                         <i class="bi bi-hand-thumbs-up-fill"></i>
@@ -39,25 +40,25 @@
             <div class="health-insights p-2">
                 <div (click)="onNextPaths('heart rate')" class="insight-show" >
                     <div class="content-title">
-                        <div class="title">ความดันโลหิต<i class="bi bi-arrows-angle-expand"></i></div>
+                        <div class="title" style="border-bottom: 5px solid #dc3545;">ความดันโลหิต<i class="bi bi-arrows-angle-expand"></i></div>
                         <div><i class="bi bi-graph-up"></i></div>
-                    </div>
-                </div>
-                <div (click)="onNextPaths('oxygen level')" class="insight-show" >
-                    <div class="content-title">
-                        <div class="title">อัตราการเต็นหัวใจ<i class="bi bi-arrows-angle-expand"></i></div>
-                        <div><i class="bi bi-bar-chart-line"></i></div>
                     </div>
                 </div>
                 <div (click)="onNextPaths('oxygen level')" class="insight-show">
                     <div class="content-title">
-                        <div class="title">อัตราออกซิเจน<i class="bi bi-arrows-angle-expand"></i></div>
+                        <div class="title" style="border-bottom: 5px solid #e83e8c;">อัตราออกซิเจน<i class="bi bi-arrows-angle-expand"></i></div>
                         <i class="bi bi-water"></i>
+                    </div>
+                </div>
+                <div (click)="onNextPaths('oxygen level')" class="insight-show" >
+                    <div class="content-title">
+                        <div class="title" style="border-bottom: 5px solid #fd7e14;">อัตราการเต็นหัวใจ<i class="bi bi-arrows-angle-expand"></i></div>
+                        <div><i class="bi bi-bar-chart-line"></i></div>
                     </div>
                 </div>
                 <div (click)="onNextPaths('schedules')" class="insight-show">
                     <div class="content-title">
-                        <div class="title">การจัดยา<i class="bi bi-arrows-angle-expand"></i></div>
+                        <div class="title" style="border-bottom: 5px solid #ffed07;">การจัดยา<i class="bi bi-arrows-angle-expand"></i></div>
                         <i class="bi bi-capsule"></i>
                     </div>
                 </div>
