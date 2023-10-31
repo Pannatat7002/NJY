@@ -22,5 +22,10 @@ export class WorkDatabaseService {
   public queryStoryData(offset:number,maxoffset:number): Promise<any> {
     var url = `https://script.google.com/macros/s/AKfycbyCN2crmOYmua74Eowhifbn6oEg8iorHLRGl2b-ng3TSiWCMgYRazfAWomFFio9SGlmSA/exec?offset=${offset}&max=${maxoffset}`
     return this.http.get(url).toPromise();
-    }
+  }
+  
+  public queryVitalSigns(userName:string,date:any): Promise<any> {
+    var url = `https://njy-follow-app-6580f-default-rtdb.asia-southeast1.firebasedatabase.app/users/${userName}/${date.year}/${date.month}.json`
+    return this.http.get(url).toPromise();
+  }
 }

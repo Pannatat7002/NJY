@@ -10,14 +10,21 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent implements OnInit {
-// selectMode:string = "status"
-selectMode:string = "home"
-// selectMode:string = "schedules"
-userProfile:any
-timeout:boolean = true;
-timeOutLoading:boolean = false;
+  // selectMode:string = "status"
+  selectMode: string = "home"
+  // selectMode:string = "schedules"
+  userProfile: any
+  timeout: boolean = true;
+  timeOutLoading: boolean = false;
+
+  //time
+  currentYear:any
+  currentMonth:any
+  currentDay:any
+  defaultDateTime:any
+  
   constructor(
-    private AuthService:AuthService,
+    private AuthService: AuthService,
     private router: Router,
     private workDataService: WorkDatabaseService,
     private cookieService: CookieService,
@@ -25,46 +32,59 @@ timeOutLoading:boolean = false;
 
   ngOnInit(): void {
     this.getPosition()
+    this.queryTimeNumber()
     const Token = this.cookieService.get('accessToken')
-    if(!Token|| Token === undefined){
+    if (!Token || Token === undefined) {
       this.router.navigate([''])
     } else {
-      this.userProfile = JSON.parse(this.cookieService.get('userProfile'))    
+      this.userProfile = JSON.parse(this.cookieService.get('userProfile'))
       this.getUserProfile(this.userProfile.ender)
     }
   }
 
-  loading(event:any){
+  loading(event: any) {
     this.timeOutLoading = event
   }
 
-  SignOut(){
-    this.AuthService.SignOut().then(()=>{
+  SignOut() {
+    this.AuthService.SignOut().then(() => {
       this.router.navigate([''])
     })
   }
 
 
-  getUserProfile(user:string) {
+  getUserProfile(user: string) {
     this.workDataService.getHistory(user).then((res) => {
       this.userProfile = res.user[0]
       this.timeout = false
-    }).catch((err)=>{
+    }).catch((err) => {
       this.timeout = false
     })
   }
-  onNextPaths(paths:string){
+  onNextPaths(paths: string) {
     this.selectMode = paths
   }
 
-  getPosition(){
+  getPosition() {
     console.log('lat');
-    
-      navigator.geolocation.getCurrentPosition(resp => {
-        console.log('lng', resp.coords.longitude);
-        console.log('lat',resp.coords.latitude);
-                },
-        err => {
-        });
+
+    navigator.geolocation.getCurrentPosition(resp => {
+      console.log('lng', resp.coords.longitude);
+      console.log('lat', resp.coords.latitude);
+    },
+      err => {
+      });
+  }
+
+  queryTimeNumber() {
+    this.currentYear = new Date().getFullYear();
+    this.currentMonth = new Date().getMonth()+1;
+    this.currentDay = new Date().getDate();
+    this.defaultDateTime = {
+      day:this.currentDay,
+      month:this.currentMonth,
+      year:this.currentYear
+    }
+    // alert(JSON.stringify(this.defaultDateTime));
   }
 }

@@ -4,7 +4,8 @@
     <div style="display: block; justify-content: center;width: 100%;text-align: center;">
         <div style="background-color: #FAFAFA;">
             <div (click)="onBack()" class="butBack bi bi-backspace" style="cursor: pointer;">
-                <span style="margin-left: 18px;">อัตราการเต้นของหัวใจ</span>
+                <span style="margin-left: 18px;">ความดันโลหิต </span>
+                <!-- <span style="margin-left: 18px;">อัตราการเต้นของหัวใจ</span> -->
             </div>
             <div class="datetab">
                 <div *ngFor="let date of listDateTime;">
@@ -23,9 +24,9 @@
                     class="task-content">
                     <div class="task-box">
                         <div class="text-title">{{item.badge}}</div>
-                        <div class="text-status">{{item.data}}{{item.unit}}</div>
+                        <div class="text-status">{{item.data[0]}}{{item.unit}}</div>
                     </div>
-                    <div class="bi bi-arrow-down-up"></div>
+                    <!-- <div class="bi bi-arrow-down-up"></div> -->
                 </div>
             </div>
         </div>
