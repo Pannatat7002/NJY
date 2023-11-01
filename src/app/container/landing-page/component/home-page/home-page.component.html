@@ -9,7 +9,7 @@
             </span>
         </div> -->
         <div class="content-profile">
-            <div class="image">
+            <div class="image" (click)="onNextPaths('profile')">
                 <i class="bi bi-person-bounding-box"></i>
             </div>
             <!-- <div class="name">สวัสดี, ปัณณทัต! <br> -->
@@ -50,18 +50,24 @@
                         <i class="bi bi-water"></i>
                     </div>
                 </div>
-                <div (click)="onNextPaths('oxygen level')" class="insight-show" >
+                <div (click)="onNextPaths('sugar level')" class="insight-show" >
                     <div class="content-title">
-                        <div class="title" style="border-bottom: 5px solid #fd7e14;">อัตราการเต็นหัวใจ<i class="bi bi-arrows-angle-expand"></i></div>
-                        <div><i class="bi bi-bar-chart-line"></i></div>
+                        <div class="title" style="border-bottom: 5px solid #fd7e14;">น้ำตาลในเลือด<i class="bi bi-arrows-angle-expand"></i></div>
+                        <div><i class="bi bi-person-heart"></i></div>
                     </div>
                 </div>
-                <div (click)="onNextPaths('schedules')" class="insight-show">
+                <div (click)="onNextPaths('medicine')" class="insight-show">
+                    <div class="content-title">
+                        <div class="title" style="border-bottom: 5px solid #ffed07;">การบริหารยา<i class="bi bi-arrows-angle-expand"></i></div>
+                        <i class="bi bi-capsule"></i>
+                    </div>
+                </div>
+                <!-- <div (click)="onNextPaths('schedules')" class="insight-show">
                     <div class="content-title">
                         <div class="title" style="border-bottom: 5px solid #ffed07;">การจัดยา<i class="bi bi-arrows-angle-expand"></i></div>
                         <i class="bi bi-capsule"></i>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
 

@@ -3,9 +3,10 @@
 
     <div style="display: block; justify-content: center;width: 100%;text-align: center;">
         <div style="background-color: #FAFAFA;">
-            <div (click)="onBack()" class="butBack bi bi-backspace" style="cursor: pointer;">
+            <div class="butBack" style="cursor: pointer;">
+                <span (click)="onBack()"  class="bi bi-backspace"></span>
                 <span style="margin-left: 18px;">ความดันโลหิต </span>
-                <!-- <span style="margin-left: 18px;">อัตราการเต้นของหัวใจ</span> -->
+                <span (click)="queryVitalSigns('นายวีระยุทร์ สุธีสรโยธิน')" class="bi bi-arrow-clockwise"></span>
             </div>
             <div class="datetab">
                 <div *ngFor="let date of listDateTime;">

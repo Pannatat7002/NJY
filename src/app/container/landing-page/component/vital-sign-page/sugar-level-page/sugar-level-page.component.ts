@@ -1,26 +1,26 @@
-import { Component, OnInit,Output,EventEmitter, Input } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
+// import { ChartData } from 'chart.js';
 import { WorkDatabaseService } from 'src/app/service/work-database.service';
-
 @Component({
-  selector: 'app-oxygen-level-page',
-  templateUrl: './oxygen-level-page.component.html',
-  styleUrls: ['./oxygen-level-page.component.scss']
+  selector: 'app-sugar-level-page',
+  templateUrl: './sugar-level-page.component.html',
+  styleUrls: ['./sugar-level-page.component.scss']
 })
-export class OxygenLevelPageComponent implements OnInit {
+export class SugarLevelPageComponent implements OnInit {
   timeout: boolean = true;
   barChartOptions = {
     responsive: true,
   };
   barChartLabels: any
-  // barChartType: any = 'line';
   barChartType: any = 'bar';
+  // barChartType: any = 'line';
   barChartLegend: any = true;
   barChartPlugins = [];
   mouthNow: any
   barChartData: any
   timeOutLoading: boolean = false;
-  _selectTitle: any = 'อัตราออกซิเจน'
-  _selectDate: any = 'week'
+  _selectTitle: any = 'น้ำตาลในเลือด'
+  _selectDate: any = 'day'
   _selectRecord: any
   //ListData
   listTitle: any
@@ -32,6 +32,7 @@ export class OxygenLevelPageComponent implements OnInit {
 
   constructor(
     private workDataService: WorkDatabaseService,
+
   ) { }
 
   ngOnInit(): void {
@@ -42,11 +43,12 @@ export class OxygenLevelPageComponent implements OnInit {
     this.getCurrentMonth()
   }
 
+  
   getChart(item?: any) {
     // listData = [65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56, 55, 40]
     var days = this.getCurrentMonth().days
     switch (this._selectDate) {
-      case 'week':
+      case 'day':
         this.barChartLabels = days.splice(0, 7)
         break;
       case 'month':
@@ -62,28 +64,29 @@ export class OxygenLevelPageComponent implements OnInit {
     // this.barChartLabels = days.splice(0, item.data.length)
     this.mouthNow = this.getCurrentMonth().month
     this.barChartData = [
+      // {
+      //   data: item['data'],
+      //   label: item.badge,
+      //   // borderColor: '#dc3545',
+      //   // backgroundColor	:"#dc3545",
+      //   tension: 0.1,
+      //   fill: false,
+      //   pointStyle: 'dash',
+      //   hitRadius: 5,
+      //   borderWidth: 3,
+      //   // bodyColor:'#38454c',
+      //   display: true
+      // },
       {
         data: item['data'],
         label: item.badge,
-        borderColor: '#6f42c1',
-        backgroundColor	:"#6f42c1",
+        borderColor: '#fd7e14',
+        backgroundColor	:"#fd7e14",
         barThickness: 10,//ความหนา
         barPercentage: 1,
         borderRadius:10,
-        maxBarThickness:100,
-        // minBarLength:100
-        // minBarLength: 2,
-        // tension: 0.1,
-        // fill: false,
-        // pointStyle: 'dash',
-        // hitRadius: 5,
-        // borderWidth: 3,
-        // // bodyColor:'#38454c',
-        // display: true,
-        
-      },
-
-      // { data: [28, 48, 40, 19, 86, 27, 90,65, 59, 80, 81, 56, 55, 40], label: 'Spo2' },
+        maxBarThickness:150,
+      }
     ];
   }
 
@@ -119,7 +122,7 @@ export class OxygenLevelPageComponent implements OnInit {
   }
 
   selectTitle(item: any) {
-    console.log('itemstart', item);
+    // console.log('itemstart', item);
 
     this._selectTitle = item
     this.getChart(item)
@@ -131,11 +134,11 @@ export class OxygenLevelPageComponent implements OnInit {
   }
 
   createDataTitle() {
-    console.log('(this.userProfile', this.userProfile);
+    // console.log('(this.userProfile', this.userProfile);
 
     // this.queryVitalSigns(this.userProfile.ender)
     this.queryVitalSigns("นายวีระยุทร์ สุธีสรโยธิน")
-    this.listDateTime = ["week", "month", "year"]
+    this.listDateTime = ["day", "month", "year"]
     this.listRecord = [
       {
         dateRecord: 'บันทึก 1 ก.ค 2023',
@@ -171,20 +174,20 @@ export class OxygenLevelPageComponent implements OnInit {
   }
 
   downloadRecord() {
-    console.log('downloadRecord', this._selectRecord);
+    // console.log('downloadRecord', this._selectRecord);
     window.open(this._selectRecord.link, "_blank");
 
   }
 
   queryVitalSigns(userName: string) {
     this.workDataService.queryVitalSigns(userName, this.defaultDateTime).then((res) => {
-      var data: any = res.daily_Health_vitality.vital_signs
-      console.log('queryVitalSigns', data);
+      var data: any = res.daily_Health_vitality.blood_sugar_level
+      // console.log('queryVitalSigns', data);
       this.listTitle = [
         {
-          badge: 'อัตราออกซิเจน',
+          badge: 'น้ำตาลในเลือด',
           data: [],
-          unit: "%"
+          unit: "mg/dl"
         },
         // {
         //   badge: 'ขณะหัวใจห้องล่างคลายตัว(DBP)',
@@ -198,15 +201,15 @@ export class OxygenLevelPageComponent implements OnInit {
         // }
       ]
       Object.keys(data).forEach((list: any) => {
-        var item: any = data[list]['Blood_Pressure']
-        this.listTitle[0]['data'].push(Number(item.O2) || 0)
+        var item: any = data[list]['blood_level']
+        this.listTitle[0]['data'].push(Number(item) || 0) // blood_leve
         // this.listTitle[1]['data'].push(Number(item.dbp) || 0)
-        // this.listTitle[2]['data'].push(Number(item[" pulse"]) || 0)
+        // this.listTitle[2]['data'].push(Number(item["pulse"]) || 0)
       })
-      console.log('this.listTitle', this.listTitle);
+      // console.log('this.listTitle', this.listTitle);
       this.selectTitle(this.listTitle[0])
     }).catch((err) => {
-      console.log('queryVitalSigns err', err);
+      // console.log('queryVitalSigns err', err);
     })
   }
 }

@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'db_heavent_regular';
-    src: url('../../../../../../assets/scss/fonts/DB_Heavent_Cond_v3.2.ttf');
+    src: url('../../../../../assets/scss/fonts/DB_Heavent_Cond_v3.2.ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -26,6 +26,19 @@ canvas {
         justify-content: space-between;
         align-items: center;
     }
+
+    .dateTime {
+        color: #2F3C33;
+        font-size: 28px;
+        height: auto;
+        // padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span{
+            padding: 12px;
+        }
+    }
 }
 
 .spinner-grow {
@@ -37,11 +50,12 @@ canvas {
 .datetab {
     display: flex;
     justify-content: space-around;
-    align-items: center;    // height: 53px;
+    align-items: center; // height: 53px;
     border-radius: 32px;
     border: 2px solid #6c757d;
     margin: 0px 12px;
     overflow: hidden;
+
     span {
         cursor: pointer;
         // overflow: hidden;
@@ -52,7 +66,8 @@ canvas {
         width: auto;
         // border-bottom: 2px solid rgb(30, 136, 229);
     }
-    .active{
+
+    .active {
         color: black;
         font-size: 36px;
         font-weight: 500;
@@ -63,7 +78,7 @@ canvas {
     // display: flex;
     // justify-content: left;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 100%;
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
@@ -79,14 +94,16 @@ canvas {
         justify-content: space-between;
         margin: 3px;
         border-radius: 6px;
-        .task-box{
+
+        .task-box {
             width: 100%;
+
             .text-title {
                 padding: 6px;
                 font-size: 22px;
                 line-height: 40px;
             }
-    
+
             .text-status {
                 font-size: 28px;
                 line-height: 40px;
@@ -102,7 +119,8 @@ canvas {
     }
 
     .active {
-        background-color: #dc3545;
+        background-color: #6f42c1;
+        // background-color: #dc3545;
         color: #FFF;
     }
 }
@@ -127,7 +145,7 @@ canvas {
         top: 13px;
         right: 145px;
         font-size: 35px;
-        color: #ea4a4a;
+        color: #1264fc;
     }
 }
 
@@ -148,6 +166,7 @@ canvas {
         border-radius: 12px;
         align-items: center;
         margin: 12px;
+
         .content-record {
             margin: 5px;
             height: 54px;
@@ -156,11 +175,13 @@ canvas {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            .title{
+
+            .title {
                 padding: 18px;
             }
-            .option-record{
-                i{
+
+            .option-record {
+                i {
                     cursor: pointer;
                     padding: 12px;
                 }

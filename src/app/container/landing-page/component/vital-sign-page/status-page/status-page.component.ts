@@ -13,14 +13,15 @@ export class StatusPageComponent implements OnInit {
     responsive: true,
   };
   barChartLabels: any
-  barChartType: any = 'line';
+  barChartType: any = 'bar';
+  // barChartType: any = 'line';
   barChartLegend: any = true;
   barChartPlugins = [];
   mouthNow: any
   barChartData: any
   timeOutLoading: boolean = false;
   _selectTitle: any = 'ขณะหัวใจห้องล่างบีบตัว(SBP)'
-  _selectDate: any = 'week'
+  _selectDate: any = 'day'
   _selectRecord: any
   //ListData
   listTitle: any
@@ -46,7 +47,7 @@ export class StatusPageComponent implements OnInit {
     // listData = [65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56, 55, 40]
     var days = this.getCurrentMonth().days
     switch (this._selectDate) {
-      case 'week':
+      case 'day':
         this.barChartLabels = days.splice(0, 7)
         break;
       case 'month':
@@ -62,21 +63,29 @@ export class StatusPageComponent implements OnInit {
     // this.barChartLabels = days.splice(0, item.data.length)
     this.mouthNow = this.getCurrentMonth().month
     this.barChartData = [
+      // {
+      //   data: item['data'],
+      //   label: item.badge,
+      //   // borderColor: '#dc3545',
+      //   // backgroundColor	:"#dc3545",
+      //   tension: 0.1,
+      //   fill: false,
+      //   pointStyle: 'dash',
+      //   hitRadius: 5,
+      //   borderWidth: 3,
+      //   // bodyColor:'#38454c',
+      //   display: true
+      // },
       {
         data: item['data'],
         label: item.badge,
-        // borderColor: '#dc3545',
-        // backgroundColor	:"#dc3545",
-        tension: 0.1,
-        fill: false,
-        pointStyle: 'dash',
-        hitRadius: 5,
-        borderWidth: 3,
-        // bodyColor:'#38454c',
-        display: true
-      },
-
-      // { data: [28, 48, 40, 19, 86, 27, 90,65, 59, 80, 81, 56, 55, 40], label: 'Spo2' },
+        borderColor: '#dc3545',
+        backgroundColor	:"#dc3545",
+        barThickness: 10,//ความหนา
+        barPercentage: 1,
+        borderRadius:10,
+        maxBarThickness:150,
+      }
     ];
   }
 
@@ -128,7 +137,7 @@ export class StatusPageComponent implements OnInit {
 
     // this.queryVitalSigns(this.userProfile.ender)
     this.queryVitalSigns("นายวีระยุทร์ สุธีสรโยธิน")
-    this.listDateTime = ["week", "month", "year"]
+    this.listDateTime = ["day", "month", "year"]
     this.listRecord = [
       {
         dateRecord: 'บันทึก 1 ก.ค 2023',
@@ -194,7 +203,7 @@ export class StatusPageComponent implements OnInit {
         var item: any = data[list]['Blood_Pressure']
         this.listTitle[0]['data'].push(Number(item.sbp) || 0)
         this.listTitle[1]['data'].push(Number(item.dbp) || 0)
-        this.listTitle[2]['data'].push(Number(item[" pulse"]) || 0)
+        this.listTitle[2]['data'].push(Number(item["pulse"]) || 0)
       })
       // console.log('this.listTitle', this.listTitle);
       this.selectTitle(this.listTitle[0])

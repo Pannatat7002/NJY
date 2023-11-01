@@ -63,7 +63,8 @@ canvas {
     // display: flex;
     // justify-content: left;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 100%;
+    // grid-template-columns: 50% 50%;
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
@@ -102,7 +103,7 @@ canvas {
     }
 
     .active {
-        background-color: #dc3545;
+        background-color: #fd7e14;
         color: #FFF;
     }
 }
