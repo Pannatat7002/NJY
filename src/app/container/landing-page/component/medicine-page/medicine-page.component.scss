@@ -27,16 +27,79 @@ canvas {
         align-items: center;
     }
 
-    .dateTime {
-        color: #2F3C33;
-        font-size: 28px;
-        height: auto;
-        // padding: 15px;
-        display: flex;
-        justify-content: center;
+
+    .content-header {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 6px 12px;
+        // color: #ffffff;
+        // background-color: #1264fc;
+
+        .dateTime {
+            font-size: 28px;
+            height: auto;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+
+            span {
+                padding: 12px;
+            }
+        }
+
+        .option-medicine {
+            font-size: 28px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .option-menu {
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    .timeLine {
+        display: grid;
+        // justify-content: start;
         align-items: center;
-        span{
-            padding: 12px;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+
+        .content-body {
+            margin: 0px 12px;
+            padding: 6px 12px;
+            .content-title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                // color: #000000;
+                font-size: 26px;
+                .left{
+
+                }
+                .right{
+                    cursor: pointer;
+                    // color: #1264fc;
+                }
+            }
+            
+            .content-detail {
+                // background-color: #ffffff;
+                // background-color: rebeccapurple;
+                // height: 200px;
+                .content-show{
+                    margin-top: 18px;
+                    height: 64px;
+                    background-color: rgb(255, 255, 255);
+                    border-radius: 12px;
+                }
+            }
         }
     }
 }

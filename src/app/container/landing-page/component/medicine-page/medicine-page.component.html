@@ -8,15 +8,10 @@
                 <span style="margin-left: 18px;">การบริหารยา </span>
                 <span class="bi bi-arrow-clockwise"></span>
             </div>
-            <div class="dateTime">
+            <!-- <div class="dateTime">
                 <span>วันที่ {{defaultDateTime.day}}</span>
                 <span>เดือน {{mouthNow}}</span>
                 <span>ปี {{defaultDateTime.year+543}}</span>
-            </div>
-            <!-- <div class="datetab">
-                <div *ngFor="let date of listDateTime;">
-                    <span (click)="selectDate(date)" [ngClass]="{'active' : _selectDate === date }">{{date}}</span>
-                </div>
             </div> -->
             <!-- <div class="dateTime" style="font-size: 18px;display: grid;">
                 <h3>การบริหารยาตามหลัก 10Rs </h3>
@@ -24,23 +19,54 @@
                     โดยยึดหลักปฏิบัติถูกต้อง</h5>
             </div> -->
         </div>
-    </div>
-    <!-- 
-<div class="modal fade" id="myModal2">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">ยืนยันการดาวน์โหลด</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="content-header">
+            <div class="dateTime">
+                <!-- <span>วันที่ {{defaultDateTime.day}}</span> -->
+                <span>{{mouthNow}}</span>
+                <span>{{defaultDateTime.year+543}}</span>
             </div>
-            <div class="modal-body">
-                {{_selectRecord && _selectRecord.dateRecord}}.PDF
+            <div class="option-medicine">
+                <div class="option-menu bi bi-capsule"></div>
+                <div class="option-menu bi bi-capsule-pill"></div>
+                <div class="option-menu bi bi-prescription2"></div>
             </div>
-            <div class="modal-footer">
-                <button (click)="downloadRecord()" type="button" class="btn btn-success" data-dismiss="modal">ดาวน์โหลด</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal">ยกเลิก</button>
-            </div>
+        </div>
+        <div class="timeLine">
+            <div class="content-body">
+                <div class="content-title">
+                    <div class="left">เช้า 6:00-11:00 น.</div>
+                    <div class="right bi bi-arrow-repeat"></div>
+                </div>
+                <div class="content-detail">
+                    <div class="content-show">
 
+                    </div>
+                </div>
+            </div>
+            <div class="content-body">
+                <div class="content-title">
+                    <div class="left">กลางวัน 12.00 น.</div>
+                    <div class="right bi bi-arrow-repeat"></div>
+                </div>
+                <div class="content-detail">
+                    <div class="content-show">
+
+                    </div>
+                </div>
+            </div>
+            <div class="content-body">
+                <div class="content-title">
+                    <div class="left">เย็น  18.00 น</div>
+                    <div class="right bi bi-arrow-repeat"></div>
+                </div>
+                <div class="content-detail">
+                    <div class="content-show">
+
+                    </div>
+                    <div class="content-show">
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div> -->
