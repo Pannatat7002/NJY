@@ -105,7 +105,7 @@ export class MedicineHistoryComponent implements OnInit {
         },
         {
           dateTime: 'กลางคืน',
-          status: "success"
+          status: "request"
         }
       ],
       7: [
@@ -119,7 +119,7 @@ export class MedicineHistoryComponent implements OnInit {
         },
         {
           dateTime: 'เย็น',
-          status: "success"
+          status: "request"
         },
         {
           dateTime: 'กลางคืน',
@@ -147,5 +147,11 @@ export class MedicineHistoryComponent implements OnInit {
     }
     this.listTitleDate = Object.keys(this.listTitle)
     console.log(' this.listTitleDate', this.listTitleDate)
+  }
+
+  downloadRecord() {
+    // console.log('downloadRecord', this._selectRecord);
+    // window.open(this._selectRecord.link, "_blank");
+
   }
 }

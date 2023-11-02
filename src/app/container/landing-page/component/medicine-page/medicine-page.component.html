@@ -24,7 +24,7 @@
                 [ngClass]="{'active' : _selectContent === 'now' }">ล่าสุด</button>
             <!-- <button>|</button> -->
             <button (click)="selectContent('history')"
-                [ngClass]="{'active' : _selectContent === 'history' }">ประวัติ</button>
+                [ngClass]="{'active' : _selectContent === 'history' }">ดูย้อนหลัง</button>
         </div>
         <app-medicine-start [defaultDateTime]="defaultDateTime" [getCurrentDateTime]="getCurrentMonth()"  *ngIf="_selectContent === 'now'"></app-medicine-start>
         <app-medicine-history [defaultDateTime]="defaultDateTime" [getCurrentDateTime]="getCurrentMonth()" *ngIf="_selectContent === 'history'"></app-medicine-history>

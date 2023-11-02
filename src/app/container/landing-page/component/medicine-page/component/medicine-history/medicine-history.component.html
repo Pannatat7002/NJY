@@ -10,7 +10,10 @@
     <div class="content-body">
         <div class="content-title">
             <div class="left">ข้อมูลย้อนหลัง</div>
-            <div class="right bi bi-arrow-repeat"></div>
+            <div class="right">
+                <i class="bi bi bi-download" data-toggle="modal" data-target="#medicModel"></i>
+                <i class="bi bi-arrow-repeat"></i>
+            </div>
         </div>
         <div *ngFor="let item of listTitleDate">
             <div class="content-detail">
@@ -26,10 +29,10 @@
                             <span> กลางคืน </span>
                         </div>
                         <div class="columnTime">
-                            <div  *ngFor="let data of listTitle[item]">
+                            <div *ngFor="let data of listTitle[item]">
                                 <span *ngIf="data.status === 'success'"><i class="bi bi-check-circle-fill"></i> </span>
                                 <span *ngIf="data.status === 'cancel'"> <i class="bi bi-x-circle-fill"></i> </span>
-                                <span *ngIf="data.status === 'request'"> <i class="bi bi-check-circle-fill"></i> </span>
+                                <span *ngIf="data.status === 'request'"> <i class="bi bi-c-circle-fill"></i> </span>
                             </div>
                         </div>
                     </div>
@@ -113,4 +116,30 @@
                 </div>
             </div>
         </div> -->
+</div>
+
+
+<div class="modal fade" id="medicModel">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">ยืนยันการดาวน์โหลด</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <!-- {{_selectRecord && _selectRecord.dateRecord}}.PDF -->
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button (click)="downloadRecord()" type="button" class="btn btn-success" data-dismiss="modal">ดาวน์โหลด</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">ยกเลิก</button>
+            </div>
+
+        </div>
+    </div>
 </div>
