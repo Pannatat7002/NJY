@@ -19,7 +19,7 @@ export class MedicinePageComponent implements OnInit {
   mouthNow: any
   barChartData: any
   timeOutLoading: boolean = false;
-  _selectTitle: any = 'อัตราออกซิเจน'
+  _selectContent: any = 'now'
   _selectDate: any = 'week'
   _selectRecord: any
   //ListData
@@ -70,5 +70,9 @@ export class MedicinePageComponent implements OnInit {
     };
   }
 
+  selectContent(item: any) {
+    this._selectContent = item
+    // this.getChart(this._selectTitle )
+  }
   
 }

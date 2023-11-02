@@ -27,7 +27,30 @@ canvas {
         align-items: center;
     }
 
-
+    .content-toggle{
+        display: grid;
+        // justify-content: space-around;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        background: #FFF;
+        padding-bottom: 6px;
+        button{
+            border: none;
+            font-size: 28px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: none;
+        }
+        .active{
+            border-bottom: 3px black solid;
+            // font-size: 32px;
+        }
+    }
     .content-header {
         display: grid;
         grid-template-columns: 60% 40%;
@@ -35,11 +58,11 @@ canvas {
         overflow: hidden;
         white-space: nowrap;
         padding: 6px 12px;
-        // color: #ffffff;
-        // background-color: #1264fc;
-
+        background: var(--green);
+        color: #FFF;
+        border-radius: 0 0 24px 24px;
         .dateTime {
-            font-size: 28px;
+            font-size: 26px;
             height: auto;
             display: flex;
             justify-content: left;

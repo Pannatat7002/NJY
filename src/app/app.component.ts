@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'NJY-follow-app';
+  // title = 'NJY-follow-app';
+  title = 'Health-follow-app';
   eventLoading:boolean = false
   Loading(event:boolean){
     this.eventLoading = event

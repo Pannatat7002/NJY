@@ -10,9 +10,9 @@
     </div>
     <span class="title-header"><span style="color: #1982f3;
       font-weight: 600;
-      font-size: 60px;
-      text-shadow: 5px 0px 12px #55a1f3;">N</span>JY FOLLOW</span> 
-
+      font-size: 48px;
+      text-shadow: 5px 0px 12px #55a1f3;">H</span>EALTH FOLLOW</span>
+    <!-- text-shadow: 5px 0px 12px #55a1f3;">N</span>JY FOLLOW</span>  -->
     <!-- <form action="signin.php" method="post">
         <div class="form-group">
           <label for="username">ชื่อ-อีเมล:</label>
@@ -39,14 +39,16 @@
       <input class="btn" type="submit" value="Sign In" style="color: #FFF;  background: #1982f3;">
       <!-- <div class="forgot text-center">Already have an account? <link rel="stylesheet" href="/" ><span style="color: #84CC16;">Sign In.</span></div> -->
       <!-- <div class="forgot text-center"><a rel="stylesheet" href="/forgot-page" >ลืมรหัสผ่าน?</a></div> -->
-      <div class="forgot text-center"><p (click)="forgot = !forgot" >ลืมรหัสผ่าน?</p></div>
+      <div class="forgot text-center">
+        <p (click)="forgot = !forgot">ลืมรหัสผ่าน?</p>
+      </div>
     </form>
   </body>
 
 
   <!-- <div class="box-effect1"></div> -->
-    <div class="key-effect bi bi-file-lock2"></div>
-    <div class="version">Ver 1.2.5</div>
+  <div class="key-effect bi bi-file-lock2"></div>
+  <div class="version">Ver 1.2.5</div>
 </div>
 
 <app-forgot-page *ngIf="forgot" (closeforGet)="closeforGet($event)"></app-forgot-page>
