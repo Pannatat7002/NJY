@@ -1,0 +1,116 @@
+<div class="content-header">
+    <div class="dateTime">
+        <i class="bi bi-caret-left-fill"></i>
+        <span>{{getCurrentDateTime.month}}</span>
+        <span>{{defaultDateTime.year+543}}</span>
+        <i class="bi bi-caret-right-fill"></i>
+    </div>
+</div>
+<div class="timeLine">
+    <div class="content-body">
+        <div class="content-title">
+            <div class="left">ข้อมูลย้อนหลัง</div>
+            <div class="right bi bi-arrow-repeat"></div>
+        </div>
+        <div *ngFor="let item of listTitleDate">
+            <div class="content-detail">
+                <div class="content-show">
+                    <div class="content-date">
+                        {{item}}
+                    </div>
+                    <div class="content-body">
+                        <div class="columnTime">
+                            <span> เช้า </span>
+                            <span> กลางวัน </span>
+                            <span> เย็น </span>
+                            <span> กลางคืน </span>
+                        </div>
+                        <div class="columnTime">
+                            <div  *ngFor="let data of listTitle[item]">
+                                <span *ngIf="data.status === 'success'"><i class="bi bi-check-circle-fill"></i> </span>
+                                <span *ngIf="data.status === 'cancel'"> <i class="bi bi-x-circle-fill"></i> </span>
+                                <span *ngIf="data.status === 'request'"> <i class="bi bi-check-circle-fill"></i> </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-footer">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="content-detail">
+            <div class="content-show">
+                <div class="content-date">
+                    2
+                </div>
+                <div class="content-body">
+                    <div class="columnTime">
+                        <span> เช้า </span>|
+                        <span> กลางวัน </span>|
+                        <span> เย็น </span>|
+                        <span> กลางคืน </span>
+                    </div>
+                    <div class="columnTime">
+                        <span> <i class="bi bi-check-circle-fill"></i></span>|
+                        <span><i class="bi bi-check-circle-fill"></i> </span>|
+                        <span> <i class="bi bi-x-circle-fill"></i> </span>|
+                        <span> <i class="bi bi-x-circle-fill"></i> </span>
+                    </div>
+                </div>
+                <div class="content-footer">
+                    <span>ดูเพิ่ม</span>
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="content-detail">
+            <div class="content-show">
+                <div class="content-date">
+                    3
+                </div>
+                <div class="content-body">
+                    <div class="columnTime">
+                        <span> เช้า </span>|
+                        <span> กลางวัน </span>|
+                        <span> เย็น </span>|
+                        <span> กลางคืน </span>
+                    </div>
+                    <div class="columnTime">
+                        <span> <i class="bi bi-check-circle-fill"></i></span>|
+                        <span><i class="bi bi-check-circle-fill"></i> </span>|
+                        <span> <i class="bi bi-c-circle-fill"></i> </span>|
+                        <span> <i class="bi bi-check-circle-fill"></i> </span>
+                    </div>
+                </div>
+                <div class="content-footer">
+
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <!-- <div class="content-body">
+            <div class="content-title">
+                <div class="left">กลางวัน 12.00 น.</div>
+                <div class="right bi bi-arrow-repeat"></div>
+            </div>
+            <div class="content-detail">
+                <div class="content-show">
+
+                </div>
+            </div>
+        </div>
+        <div class="content-body">
+            <div class="content-title">
+                <div class="left">เย็น  18.00 น</div>
+                <div class="right bi bi-arrow-repeat"></div>
+            </div>
+            <div class="content-detail">
+                <div class="content-show">
+
+                </div>
+                <div class="content-show">
+
+                </div>
+            </div>
+        </div> -->
+</div>

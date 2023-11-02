@@ -20,113 +20,12 @@
             </div> -->
         </div>
         <div class="content-toggle">
-                <button class="" (click)="selectContent('now')" [ngClass]="{'active' : _selectContent === 'now' }">ล่าสุด</button>
-                <!-- <button>|</button> -->
-                <button (click)="selectContent('history')" [ngClass]="{'active' : _selectContent === 'history' }">ประวัติ</button>
+            <button class="" (click)="selectContent('now')"
+                [ngClass]="{'active' : _selectContent === 'now' }">ล่าสุด</button>
+            <!-- <button>|</button> -->
+            <button (click)="selectContent('history')"
+                [ngClass]="{'active' : _selectContent === 'history' }">ประวัติ</button>
         </div>
-
-        <div *ngIf="_selectContent === 'now'">
-            <div class="content-header">
-                <div class="dateTime">
-                    <span>| วันที่ {{defaultDateTime.day}}</span>
-                    <span>{{mouthNow}}</span>
-                    <span>{{defaultDateTime.year+543}} |</span>
-                </div>
-                <div class="option-medicine">
-                    <div class="option-menu bi bi-capsule"></div>
-                    <div class="option-menu bi bi-capsule-pill"></div>
-                    <div class="option-menu bi bi-prescription2"></div>
-                </div>
-            </div>
-            <div class="timeLine">
-                <div class="content-body">
-                    <div class="content-title">
-                        <div class="left">เช้า 6:00-11:00 น.</div>
-                        <div class="right bi bi-arrow-repeat"></div>
-                    </div>
-                    <div class="content-detail">
-                        <div class="content-show">
-    
-                        </div>
-                    </div>
-                </div>
-                <div class="content-body">
-                    <div class="content-title">
-                        <div class="left">กลางวัน 12.00 น.</div>
-                        <div class="right bi bi-arrow-repeat"></div>
-                    </div>
-                    <div class="content-detail">
-                        <div class="content-show">
-    
-                        </div>
-                    </div>
-                </div>
-                <div class="content-body">
-                    <div class="content-title">
-                        <div class="left">เย็น  18.00 น</div>
-                        <div class="right bi bi-arrow-repeat"></div>
-                    </div>
-                    <div class="content-detail">
-                        <div class="content-show">
-    
-                        </div>
-                        <div class="content-show">
-    
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div *ngIf="_selectContent === 'history'">
-            <div class="content-header">
-                <div class="dateTime">
-                    <span>| วันที่ {{defaultDateTime.day}}</span>
-                    <span>{{mouthNow}}</span>
-                    <span>{{defaultDateTime.year+543}} |</span>
-                </div>
-                <div class="option-medicine">
-                    <div class="option-menu bi bi-capsule"></div>
-                    <div class="option-menu bi bi-capsule-pill"></div>
-                    <div class="option-menu bi bi-prescription2"></div>
-                </div>
-            </div>
-            <div class="timeLine">
-                <div class="content-body">
-                    <div class="content-title">
-                        <div class="left">เช้า 6:00-11:00 น.</div>
-                        <div class="right bi bi-arrow-repeat"></div>
-                    </div>
-                    <div class="content-detail">
-                        <div class="content-show">
-    
-                        </div>
-                    </div>
-                </div>
-                <div class="content-body">
-                    <div class="content-title">
-                        <div class="left">กลางวัน 12.00 น.</div>
-                        <div class="right bi bi-arrow-repeat"></div>
-                    </div>
-                    <div class="content-detail">
-                        <div class="content-show">
-    
-                        </div>
-                    </div>
-                </div>
-                <div class="content-body">
-                    <div class="content-title">
-                        <div class="left">เย็น  18.00 น</div>
-                        <div class="right bi bi-arrow-repeat"></div>
-                    </div>
-                    <div class="content-detail">
-                        <div class="content-show">
-    
-                        </div>
-                        <div class="content-show">
-    
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <app-medicine-start [defaultDateTime]="defaultDateTime" [getCurrentDateTime]="getCurrentMonth()"  *ngIf="_selectContent === 'now'"></app-medicine-start>
+        <app-medicine-history [defaultDateTime]="defaultDateTime" [getCurrentDateTime]="getCurrentMonth()" *ngIf="_selectContent === 'history'"></app-medicine-history>
     </div>

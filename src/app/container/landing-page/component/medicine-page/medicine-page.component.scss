@@ -51,80 +51,80 @@ canvas {
             // font-size: 32px;
         }
     }
-    .content-header {
-        display: grid;
-        grid-template-columns: 60% 40%;
-        width: 100%;
-        overflow: hidden;
-        white-space: nowrap;
-        padding: 6px 12px;
-        background: var(--green);
-        color: #FFF;
-        border-radius: 0 0 24px 24px;
-        .dateTime {
-            font-size: 26px;
-            height: auto;
-            display: flex;
-            justify-content: left;
-            align-items: center;
+    // .content-header {
+    //     display: grid;
+    //     grid-template-columns: 60% 40%;
+    //     width: 100%;
+    //     overflow: hidden;
+    //     white-space: nowrap;
+    //     padding: 6px 12px;
+    //     background: var(--green);
+    //     color: #FFF;
+    //     border-radius: 0 0 24px 24px;
+    //     .dateTime {
+    //         font-size: 26px;
+    //         height: auto;
+    //         display: flex;
+    //         justify-content: left;
+    //         align-items: center;
 
-            span {
-                padding: 12px;
-            }
-        }
+    //         span {
+    //             padding: 12px;
+    //         }
+    //     }
 
-        .option-medicine {
-            font-size: 28px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
+    //     .option-medicine {
+    //         font-size: 28px;
+    //         display: flex;
+    //         justify-content: space-around;
+    //         align-items: center;
 
-            .option-menu {
-                cursor: pointer;
-            }
-        }
+    //         .option-menu {
+    //             cursor: pointer;
+    //         }
+    //     }
 
-    }
+    // }
 
-    .timeLine {
-        display: grid;
-        // justify-content: start;
-        align-items: center;
-        width: 100%;
-        overflow: hidden;
-        white-space: nowrap;
+    // .timeLine {
+    //     display: grid;
+    //     // justify-content: start;
+    //     align-items: center;
+    //     width: 100%;
+    //     overflow: hidden;
+    //     white-space: nowrap;
 
-        .content-body {
-            margin: 0px 12px;
-            padding: 6px 12px;
-            .content-title {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                // color: #000000;
-                font-size: 26px;
-                .left{
+    //     .content-body {
+    //         margin: 0px 12px;
+    //         padding: 6px 12px;
+    //         .content-title {
+    //             display: flex;
+    //             justify-content: space-between;
+    //             align-items: center;
+    //             // color: #000000;
+    //             font-size: 26px;
+    //             .left{
 
-                }
-                .right{
-                    cursor: pointer;
-                    // color: #1264fc;
-                }
-            }
+    //             }
+    //             .right{
+    //                 cursor: pointer;
+    //                 // color: #1264fc;
+    //             }
+    //         }
             
-            .content-detail {
-                // background-color: #ffffff;
-                // background-color: rebeccapurple;
-                // height: 200px;
-                .content-show{
-                    margin-top: 18px;
-                    height: 64px;
-                    background-color: rgb(255, 255, 255);
-                    border-radius: 12px;
-                }
-            }
-        }
-    }
+    //         .content-detail {
+    //             // background-color: #ffffff;
+    //             // background-color: rebeccapurple;
+    //             // height: 200px;
+    //             .content-show{
+    //                 margin-top: 18px;
+    //                 height: 64px;
+    //                 background-color: rgb(255, 255, 255);
+    //                 border-radius: 12px;
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 .spinner-grow {

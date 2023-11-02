@@ -25,7 +25,9 @@ import { HomePageComponent } from './container/landing-page/component/home-page/
 import { SchedulesPageComponent } from './container/landing-page/component/schedules-page/schedules-page.component';
 import { OxygenLevelPageComponent } from './container/landing-page/component/vital-sign-page/oxygen-level-page/oxygen-level-page.component';
 import { SugarLevelPageComponent } from './container/landing-page/component/vital-sign-page/sugar-level-page/sugar-level-page.component';
-import { MedicinePageComponent } from './container/landing-page/component/medicine-page/medicine-page.component'; // นำเข้า ChartsModule
+import { MedicinePageComponent } from './container/landing-page/component/medicine-page/medicine-page.component';
+import { MedicineHistoryComponent } from './container/landing-page/component/medicine-page/component/medicine-history/medicine-history.component';
+import { MedicineStartComponent } from './container/landing-page/component/medicine-page/component/medicine-start/medicine-start.component'; // นำเข้า ChartsModule
 
 // import { MainPageComponent } from './container/Landing-page/component/main-page/main-page.component';
 
@@ -45,7 +47,9 @@ import { MedicinePageComponent } from './container/landing-page/component/medici
     SchedulesPageComponent,
     OxygenLevelPageComponent,
     SugarLevelPageComponent,
-    MedicinePageComponent
+    MedicinePageComponent,
+    MedicineHistoryComponent,
+    MedicineStartComponent
   ],
   imports: [
     BrowserModule,
