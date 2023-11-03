@@ -5,6 +5,14 @@
   font-style: normal;
 }
 
+html {
+  width: 100%;
+  // height: 100vh;
+  overflow: scroll;
+  background-color: #F0F2F5;
+  font-family: 'db_heavent_regular';
+}
+
 .navbar {
   width: 100%;
   padding: 0;
@@ -40,11 +48,12 @@
   justify-content: space-between;
 
   .content-topic {
-    i{
+    i {
       font-size: 2rem;
       line-height: 4rem;
       // opacity: ;
     }
+
     // padding: 5px 0px;
     width: 100%;
     height: 58px;
@@ -55,6 +64,7 @@
     display: flex;
     justify-content: space-around;
     color: #FFF;
+
     // color: black;
     div {
       cursor: pointer;

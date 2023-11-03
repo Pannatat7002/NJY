@@ -21,7 +21,7 @@ export class StatusPageComponent implements OnInit {
   barChartData: any
   timeOutLoading: boolean = false;
   _selectTitle: any = 'ขณะหัวใจห้องล่างบีบตัว(SBP)'
-  _selectDate: any = 'day'
+  _selectDate: any = 'วัน'
   _selectRecord: any
   //ListData
   listTitle: any
@@ -47,13 +47,13 @@ export class StatusPageComponent implements OnInit {
     // listData = [65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56, 55, 40]
     var days = this.getCurrentMonth().days
     switch (this._selectDate) {
-      case 'day':
+      case 'วัน':
         this.barChartLabels = days.splice(0, 7)
         break;
-      case 'month':
+      case 'สัปดาห์':
         this.barChartLabels = days.splice(0, 31)
         break;
-      case 'year':
+      case 'เดือน':
         this.barChartLabels = days.splice(0, 12)
         break;
       default:
@@ -137,7 +137,7 @@ export class StatusPageComponent implements OnInit {
 
     // this.queryVitalSigns(this.userProfile.ender)
     this.queryVitalSigns("นายวีระยุทร์ สุธีสรโยธิน")
-    this.listDateTime = ["day", "month", "year"]
+    this.listDateTime = ["วัน", "สัปดาห์", "เดือน"]
     this.listRecord = [
       {
         dateRecord: 'บันทึก 1 ก.ค 2023',

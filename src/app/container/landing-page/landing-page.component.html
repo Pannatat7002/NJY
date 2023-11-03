@@ -1,6 +1,5 @@
 <app-loading-service *ngIf="timeOutLoading === false" (timeOutLoading)="loading($event)"></app-loading-service>
-<html *ngIf="timeOutLoading === true"
-  style="width: 100%; height: 100vh;overflow: scroll; background-color: #F0F2F5;font-family: 'db_heavent_regular';">
+<html *ngIf="timeOutLoading === true">
 <!-- <Nav class="navbar">
   <div class="Brand">
     <p>Follow App</p>
@@ -22,19 +21,19 @@
 </div> -->
 
 <div class="container-fluid">
-  <app-home-page (outPaths)="onNextPaths($event)" [hidden]="selectMode !== 'home'"
+  <app-home-page (outPaths)="onNextPaths($event)" *ngIf="selectMode === 'home'"
     [userProfile]="userProfile"></app-home-page>
   <app-main-page *ngIf="selectMode === 'post'"></app-main-page>
-  <app-history-page (onBackPath)="onNextPaths($event)" [hidden]="selectMode !== 'profile'"
+  <app-history-page (onBackPath)="onNextPaths($event)" *ngIf="selectMode === 'profile'"
     [_timeout]="timeout"></app-history-page>
   <app-schedules-page (onBackPath)="onNextPaths($event)" *ngIf="selectMode === 'schedules'"></app-schedules-page>
-  <app-status-page (onBackPath)="onNextPaths($event)" [hidden]="selectMode !== 'heart rate'" [userProfile]="userProfile"
+  <app-status-page (onBackPath)="onNextPaths($event)" *ngIf="selectMode === 'heart rate'" [userProfile]="userProfile"
     [defaultDateTime]="defaultDateTime"></app-status-page>
-  <app-oxygen-level-page (onBackPath)="onNextPaths($event)" [hidden]="selectMode !== 'oxygen level'"
+  <app-oxygen-level-page (onBackPath)="onNextPaths($event)" *ngIf="selectMode === 'oxygen level'"
     [userProfile]="userProfile" [defaultDateTime]="defaultDateTime"></app-oxygen-level-page>
-  <app-sugar-level-page (onBackPath)="onNextPaths($event)" [hidden]="selectMode !== 'sugar level'"
+  <app-sugar-level-page (onBackPath)="onNextPaths($event)" *ngIf="selectMode === 'sugar level'"
     [userProfile]="userProfile" [defaultDateTime]="defaultDateTime"></app-sugar-level-page>
-  <app-medicine-page (onBackPath)="onNextPaths($event)" [hidden]="selectMode !== 'medicine'" [userProfile]="userProfile"
+  <app-medicine-page (onBackPath)="onNextPaths($event)" *ngIf="selectMode === 'medicine'" [userProfile]="userProfile"
     [defaultDateTime]="defaultDateTime"></app-medicine-page>
 
   <!-- <app-history-page *ngIf="selectMode === 'profile'" [_userProfile]="userProfile" [_timeout]="timeout"></app-history-page> -->
