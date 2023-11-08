@@ -37,103 +37,86 @@
                 <i class="bi bi-three-dots"></i>
             </div>
 
-            <div class="tables-appointment">
-                <div class="content-appointment" style="background-size: cover;background-repeat: no-repeat;background-image: url('../../../../../assets/images/icons/home-page-image/test-image/pexels-fauxels-3184183.jpg')">
-
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-interval="4000" >
+                    <img style="background-size: cover;background-repeat: no-repeat;" src="../../../../../assets/images/icons/home-page-image/test-image/pexels-alena-darmel-7322094.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item" data-interval="4000">
+                    <img style="background-size: cover;background-repeat: no-repeat;" src="../../../../../assets/images/icons/home-page-image/test-image/pexels-alena-darmel-7322095.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item" data-interval="4000">
+                    <img style="background-size: cover;background-repeat: no-repeat;" src="../../../../../assets/images/icons/home-page-image/test-image/pexels-kampus-production-8170261.jpg" class="d-block w-100" alt="...">
+                  </div>
                 </div>
-                <div class="content-appointment" style="background-size: cover;background-repeat: no-repeat;background-image: url('../../../../../assets/images/icons/home-page-image/test-image/pexels-alena-darmel-7322094.jpg')">
-
-                </div>
-                <div class="content-appointment" style="background-size: cover;background-repeat: no-repeat;background-image: url('../../../../../assets/images/icons/home-page-image/test-image/pexels-alena-darmel-7322095.jpg')">
-
-                </div>
-                <div class="content-appointment" style="background-size: cover;background-repeat: no-repeat;background-image: url('../../../../../assets/images/icons/home-page-image/test-image/pexels-kampus-production-8170261.jpg')">
-
-                </div>
-                <!-- <div  class="text-center" style="color: #adb5bd;">
-                    Emtry
-                </div> -->
-            </div>
+                <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </button>
+              </div>
         </div>
         <div class="tab-insights">
             <div class="pl-3 pr-3" style="display: flex;justify-content: space-between;">
                 <span>ข้อมูลเชิงลึกด้านสุขภาพ</span>
-                <!-- <span>health-insights</span> -->
                 <i class="bi bi-three-dots"></i>
             </div>
 
             <div class="health-insights p-2">
                 <div (click)="onNextPaths('heart rate')" class="insight-show"  style="background-size: cover;background-repeat: no-repeat;background-image: url('../../../../../assets/images/icons/home-page-image/pexels-pavel-danilyuk-7108344.jpg')">
-                    <!-- <div></div> -->
                     <div class="content-title">
                         <div class="title" style="border-bottom: 5px solid #dc3545;">ความดันโลหิต</div>
-                        <!-- <div><i class="bi bi-graph-up"></i></div> -->
                     </div>
                 </div>
                 <div (click)="onNextPaths('oxygen level')" class="insight-show" style="background-size: cover;background-repeat: no-repeat;background-image: url('../../../../../assets/images/icons/home-page-image/IMG_8232-scaled-e1619420669293.jpg')">
                     <div class="content-title">
                         <div class="title" style="border-bottom: 5px solid #e83e8c;">อัตราออกซิเจน</div>
-                        <!-- <i class="bi bi-water"></i> -->
                     </div>
                 </div>
                 <div (click)="onNextPaths('sugar level')" class="insight-show" style="background-size: cover;background-repeat: no-repeat;background-image: url('../../../../../assets/images/icons/home-page-image/ดาวน์โหลด.jpg')">
                     <div class="content-title">
                         <div class="title" style="border-bottom: 5px solid #fd7e14;">น้ำตาลในเลือด</div>
-                        <!-- <div><i class="bi bi-person-heart"></i></div> -->
                     </div>
                 </div>
                 <div (click)="onNextPaths('medicine')" class="insight-show" style="background-size: cover;background-repeat: no-repeat;background-image: url('../../../../../assets/images/icons/home-page-image/pexels-polina-tankilevitch-3873163.jpg')">
                     <div class="content-title">
-                        <div class="title" style="border-bottom: 5px solid var(--green);">การบริหารยา</div>
-                        <!-- <i class="bi bi-capsule"></i> -->
+                        <div class="title" style="border-bottom: 5px solid var(--green);">ตารางยา</div>
                     </div>
                 </div>
-                <!-- <div (click)="onNextPaths('schedules')" class="insight-show">
-                    <div class="content-title">
-                        <div class="title" style="border-bottom: 5px solid #ffed07;">การจัดยา<i class="bi bi-arrows-angle-expand"></i></div>
-                        <i class="bi bi-capsule"></i>
-                    </div>
-                </div> -->
             </div>
         </div>
         <div class="container-schedule">
-            <div class="pl-3 pr-3"
-                style="display: flex;justify-content: space-between;">
-                <span>กำหนดการต่างๆ</span>
+            <div class="pl-3 pr-3"style="display: flex;justify-content: space-between;">
+                <span>กำหนดการนัดหมายต่างๆ</span>
                 <i class="bi bi-three-dots"></i>
             </div>
-
-            <!-- <div class="table-schedule p-2">
-                <div  class="schedule-show">
-                    24 ม.ค 2556 | หมอนัดถอนฟัน ตอนบ่ายโมง ไปรถแท๊กซี่
-                </div>
-                <div  class="schedule-show">
-                    25 พ.ค 2556 | หมอนัดถอนฟัน ตอนบ่ายโมง ไปรถแท๊กซี่
-                </div>
-                <div  class="schedule-show">
-                    26 ม.ค 2556 | หมอนัดถอนฟัน ตอนบ่ายโมง ไปรถแท๊กซี่
-                </div>
-                <div  class="schedule-show">
-                    27ม.ค 2556 | หมอนัดถอนฟัน ตอนบ่ายโมง ไปรถแท๊กซี่
-                </div>
+            <!-- <div class="pl-3 pr-3" style="background-size: cover;background-repeat: no-repeat;background-image: url('../../../../../assets/images/icons/home-page-image/pexels-tara-winstead-6690841.jpg')">
             </div> -->
             <table class="table table-schedule">
                 <thead>
-                  <tr>
+                  <tr class="table-info">
                     <th>วันที่</th>
                     <th>รายละเอียด</th>
                   </tr>
                 </thead>
                 <tbody style="white-space: nowrap;overflow: hidden;">
-                  <tr>
+                  <tr class="table-light">
                     <td>23 พ.ย 2566</td>
                     <td>หมอนัดถอนฟัน ตอนบ่ายโมง ไปรถแท๊กซี่</td>
                   </tr>
-                  <tr>
+                  <tr class="table-light">
                     <td>16 พ.ค 2566</td>
                     <td>ญาตินัด</td>
                   </tr>
-                  <tr>
+                  <tr class="table-light">
                     <td>30 ธ.ค 2566</td>
                     <td>หมอนัด ตอนบ่ายโมง ไปรถแท๊กซี่</td>
                   </tr>
