@@ -30,6 +30,31 @@
         </div>
     </div>
     <div class="content-body">
+        <div class="tab-appointment">
+            <div class="pl-3 pr-3"
+                style="display: flex;justify-content: space-between;">
+                <span>กิจกรรมนันทนาการ</span>
+                <i class="bi bi-three-dots"></i>
+            </div>
+
+            <div class="tables-appointment">
+                <div class="content-appointment" style="background-size: cover;background-repeat: no-repeat;background-image: url('../../../../../assets/images/icons/home-page-image/test-image/pexels-fauxels-3184183.jpg')">
+
+                </div>
+                <div class="content-appointment" style="background-size: cover;background-repeat: no-repeat;background-image: url('../../../../../assets/images/icons/home-page-image/test-image/pexels-alena-darmel-7322094.jpg')">
+
+                </div>
+                <div class="content-appointment" style="background-size: cover;background-repeat: no-repeat;background-image: url('../../../../../assets/images/icons/home-page-image/test-image/pexels-alena-darmel-7322095.jpg')">
+
+                </div>
+                <div class="content-appointment" style="background-size: cover;background-repeat: no-repeat;background-image: url('../../../../../assets/images/icons/home-page-image/test-image/pexels-kampus-production-8170261.jpg')">
+
+                </div>
+                <!-- <div  class="text-center" style="color: #adb5bd;">
+                    Emtry
+                </div> -->
+            </div>
+        </div>
         <div class="tab-insights">
             <div class="pl-3 pr-3" style="display: flex;justify-content: space-between;">
                 <span>ข้อมูลเชิงลึกด้านสุขภาพ</span>
@@ -38,28 +63,29 @@
             </div>
 
             <div class="health-insights p-2">
-                <div (click)="onNextPaths('heart rate')" class="insight-show" >
+                <div (click)="onNextPaths('heart rate')" class="insight-show"  style="background-size: cover;background-repeat: no-repeat;background-image: url('../../../../../assets/images/icons/home-page-image/pexels-pavel-danilyuk-7108344.jpg')">
+                    <!-- <div></div> -->
                     <div class="content-title">
-                        <div class="title" style="border-bottom: 5px solid #dc3545;">ความดันโลหิต<i class="bi bi-arrows-angle-expand"></i></div>
-                        <div><i class="bi bi-graph-up"></i></div>
+                        <div class="title" style="border-bottom: 5px solid #dc3545;">ความดันโลหิต</div>
+                        <!-- <div><i class="bi bi-graph-up"></i></div> -->
                     </div>
                 </div>
-                <div (click)="onNextPaths('oxygen level')" class="insight-show">
+                <div (click)="onNextPaths('oxygen level')" class="insight-show" style="background-size: cover;background-repeat: no-repeat;background-image: url('../../../../../assets/images/icons/home-page-image/IMG_8232-scaled-e1619420669293.jpg')">
                     <div class="content-title">
-                        <div class="title" style="border-bottom: 5px solid #e83e8c;">อัตราออกซิเจน<i class="bi bi-arrows-angle-expand"></i></div>
-                        <i class="bi bi-water"></i>
+                        <div class="title" style="border-bottom: 5px solid #e83e8c;">อัตราออกซิเจน</div>
+                        <!-- <i class="bi bi-water"></i> -->
                     </div>
                 </div>
-                <div (click)="onNextPaths('sugar level')" class="insight-show" >
+                <div (click)="onNextPaths('sugar level')" class="insight-show" style="background-size: cover;background-repeat: no-repeat;background-image: url('../../../../../assets/images/icons/home-page-image/ดาวน์โหลด.jpg')">
                     <div class="content-title">
-                        <div class="title" style="border-bottom: 5px solid #fd7e14;">น้ำตาลในเลือด<i class="bi bi-arrows-angle-expand"></i></div>
-                        <div><i class="bi bi-person-heart"></i></div>
+                        <div class="title" style="border-bottom: 5px solid #fd7e14;">น้ำตาลในเลือด</div>
+                        <!-- <div><i class="bi bi-person-heart"></i></div> -->
                     </div>
                 </div>
-                <div (click)="onNextPaths('medicine')" class="insight-show">
+                <div (click)="onNextPaths('medicine')" class="insight-show" style="background-size: cover;background-repeat: no-repeat;background-image: url('../../../../../assets/images/icons/home-page-image/pexels-polina-tankilevitch-3873163.jpg')">
                     <div class="content-title">
-                        <div class="title" style="border-bottom: 5px solid var(--green);">การบริหารยา<i class="bi bi-arrows-angle-expand"></i></div>
-                        <i class="bi bi-capsule"></i>
+                        <div class="title" style="border-bottom: 5px solid var(--green);">การบริหารยา</div>
+                        <!-- <i class="bi bi-capsule"></i> -->
                     </div>
                 </div>
                 <!-- <div (click)="onNextPaths('schedules')" class="insight-show">
@@ -70,45 +96,49 @@
                 </div> -->
             </div>
         </div>
-
-        <div class="tab-appointment">
-            <div class="pl-3 pr-3"
-                style="display: flex;justify-content: space-between;">
-                <span>กิจกรรมนันทนาการ</span>
-                <i class="bi bi-three-dots"></i>
-            </div>
-
-            <div class="table-appointment p-2">
-                <div class="content-appointment">
-
-                </div>
-                <div class="content-appointment">
-
-                </div>
-                <div class="content-appointment">
-
-                </div>
-                <div class="content-appointment">
-
-                </div>
-                <!-- <div  class="text-center" style="color: #adb5bd;">
-                    Emtry
-                </div> -->
-            </div>
-        </div>
-
-        <div class="tab-appointment">
+        <div class="container-schedule">
             <div class="pl-3 pr-3"
                 style="display: flex;justify-content: space-between;">
                 <span>กำหนดการต่างๆ</span>
                 <i class="bi bi-three-dots"></i>
             </div>
 
-            <div class="table-appointment p-2" style="min-height: 0;margin-bottom: 10vh;">
-                <div  class="text-center" style="color: #adb5bd;">
-                    ไม่พบรายการ
+            <!-- <div class="table-schedule p-2">
+                <div  class="schedule-show">
+                    24 ม.ค 2556 | หมอนัดถอนฟัน ตอนบ่ายโมง ไปรถแท๊กซี่
                 </div>
-            </div>
+                <div  class="schedule-show">
+                    25 พ.ค 2556 | หมอนัดถอนฟัน ตอนบ่ายโมง ไปรถแท๊กซี่
+                </div>
+                <div  class="schedule-show">
+                    26 ม.ค 2556 | หมอนัดถอนฟัน ตอนบ่ายโมง ไปรถแท๊กซี่
+                </div>
+                <div  class="schedule-show">
+                    27ม.ค 2556 | หมอนัดถอนฟัน ตอนบ่ายโมง ไปรถแท๊กซี่
+                </div>
+            </div> -->
+            <table class="table table-schedule">
+                <thead>
+                  <tr>
+                    <th>วันที่</th>
+                    <th>รายละเอียด</th>
+                  </tr>
+                </thead>
+                <tbody style="white-space: nowrap;overflow: hidden;">
+                  <tr>
+                    <td>23 พ.ย 2566</td>
+                    <td>หมอนัดถอนฟัน ตอนบ่ายโมง ไปรถแท๊กซี่</td>
+                  </tr>
+                  <tr>
+                    <td>16 พ.ค 2566</td>
+                    <td>ญาตินัด</td>
+                  </tr>
+                  <tr>
+                    <td>30 ธ.ค 2566</td>
+                    <td>หมอนัด ตอนบ่ายโมง ไปรถแท๊กซี่</td>
+                  </tr>
+                </tbody>
+              </table>
         </div>
     </div>
 </div>
