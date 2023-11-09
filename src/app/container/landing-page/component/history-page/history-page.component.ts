@@ -32,15 +32,15 @@ export class HistoryPageComponent implements OnInit {
     // }, 1500);
   }
 
-  SignOut() {
-    this.cookieService.delete('accessToken')
-    this.cookieService.deleteAll('accessToken')
-    this.AuthService.SignOut().then(() => {
-      setTimeout(() => {                           // <<<---using ()=> syntax
-        this.router.navigate([''])
-      }, 1000);
-    })
-  }
+  // SignOut() {
+  //   this.cookieService.delete('accessToken')
+  //   this.cookieService.deleteAll('accessToken')
+  //   this.AuthService.SignOut().then(() => {
+  //     setTimeout(() => {                           // <<<---using ()=> syntax
+  //       this.router.navigate([''])
+  //     }, 1000);
+  //   })
+  // }
 
   async getUserProfile() {    
     const DataProfile: any = await getDocs(collection(firestore, "Users")); //get data getDataProfile

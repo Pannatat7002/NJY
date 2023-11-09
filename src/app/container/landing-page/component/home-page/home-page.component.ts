@@ -1,6 +1,7 @@
 import { Component, OnInit,Output,EventEmitter,Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
+import { AuthService } from '../../../../service/auth-service/auth.service'
 
 @Component({
   selector: 'app-home-page',
@@ -14,6 +15,7 @@ export class HomePageComponent implements OnInit {
   constructor(
     private router: Router,
     private cookieService: CookieService,
+    private AuthService: AuthService,
     
     ) { }
     
@@ -22,12 +24,21 @@ export class HomePageComponent implements OnInit {
     if (!Token || Token === undefined) {
       this.router.navigate([''])
     }
-    console.log('HomePageComponent userProfile',this.userProfile);
     this.nameHeader = this.userProfile.name
   }
 
   onNextPaths(path:string){
     // this.router.navigate([''])
     this.outPaths.emit(path)
+  }
+
+  SignOut() {
+    this.cookieService.delete('accessToken')
+    this.cookieService.deleteAll('accessToken')
+    this.AuthService.SignOut().then(() => {
+      setTimeout(() => {                           // <<<---using ()=> syntax
+        this.router.navigate([''])
+      }, 1000);
+    })
   }
 }
