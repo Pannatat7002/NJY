@@ -74,107 +74,95 @@
     .content-body {
         width: 100%;
         overflow: scroll;
-        .carousel-inner {
-            position: relative;
-            overflow: hidden;
-            margin: 12px;
-            border-radius: 12px;
-            width: auto;
-            .carousel-caption {
-                margin: 0;
-                padding: 0;
-            }
-        }
+        // .tab-insights {
+        //     margin-top: 1rem;
+        //     font-size: 24px;
+        //     letter-spacing: 1px;
+        //     i {
+        //         opacity: 0.9;
+        //     }
 
-        .tab-insights {
-            margin-top: 1rem;
-            font-size: 24px;
-            letter-spacing: 1px;
-            i {
-                opacity: 0.9;
-            }
+        //     .health-insights {
+        //         display: grid;
+        //         grid-template-columns: 50% 50%;
 
-            .health-insights {
-                display: grid;
-                grid-template-columns: 50% 50%;
+        //         .insight-show {
+        //             display: flex;
+        //             margin: 5px;
+        //             height: 150px;
+        //             background: #FFF;
+        //             border-radius: 14px;
+        //             justify-content: center;
+        //             align-items: flex-end;
 
-                .insight-show {
-                    display: flex;
-                    margin: 5px;
-                    height: 150px;
-                    background: #FFF;
-                    border-radius: 14px;
-                    justify-content: center;
-                    align-items: flex-end;
+        //             .content-title {
+        //                 text-align: center;
+        //                 display: grid;
+        //                 padding: 8px;
+        //                 color: #000;
+        //                 width: 100%;
 
-                    .content-title {
-                        text-align: center;
-                        display: grid;
-                        padding: 8px;
-                        color: #000;
-                        width: 100%;
+        //                 .title {
+        //                     display: flex;
+        //                     justify-content: center;
+        //                     font-size: 24px;
+        //                     background: white;
+        //                     border-radius: 8px;
+        //                 }
 
-                        .title {
-                            display: flex;
-                            justify-content: center;
-                            font-size: 24px;
-                            background: white;
-                            border-radius: 8px;
-                        }
+        //                 i {
+        //                     font-size: 50px;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
 
-                        i {
-                            font-size: 50px;
-                        }
-                    }
-                }
-            }
-        }
+        // .tab-appointment {
+        //     font-size: 24px;
+        //     letter-spacing: 1px;
+        //     padding-top: 18px;
 
-        .tab-appointment {
-            font-size: 24px;
-            letter-spacing: 1px;
-            padding-top: 18px;
+        //     .tables-appointment {
+        //         scroll-behavior: smooth;
+        //         width: 100%;
+        //         white-space: nowrap;
+        //         display: inline-block;
+        //         overflow-x: scroll;
+        //         overflow-y: visible;
 
-            .tables-appointment {
-                scroll-behavior: smooth;
-                width: 100%;
-                white-space: nowrap;
-                display: inline-block;
-                overflow-x: scroll;
-                overflow-y: visible;
+        //         .content-appointment {
+        //             margin: 5px;
+        //             height: 200px;
+        //             width: 125px;
+        //             background: #FFF;
+        //             border-radius: 6px;
+        //             display: inline-block;
+        //             white-space: normal;
+        //             box-shadow: 3px 3px 10px #c5c5c5;
+        //         }
+        //     }
+        // }
 
-                .content-appointment {
-                    margin: 5px;
-                    height: 200px;
-                    width: 125px;
-                    background: #FFF;
-                    border-radius: 6px;
-                    display: inline-block;
-                    white-space: normal;
-                    box-shadow: 3px 3px 10px #c5c5c5;
-                }
-            }
-        }
+        // .container-schedule {
+        //     margin-top: 1rem;
+        //     font-size: 24px;
+        //     letter-spacing: 1px;
+        //     .table-schedule {
+        //         width: 100%;
+        //         overflow-y: scroll;
+        //         overflow-x: visible;
+        //         display: inline-block;
 
-        .container-schedule {
-            margin-top: 1rem;
-            font-size: 24px;
-            letter-spacing: 1px;
-            .table-schedule {
-                width: 100%;
-                overflow-y: scroll;
-                overflow-x: visible;
-                display: inline-block;
-
-                .schedule-show {
-                    white-space: nowrap;
-                    overflow: hidden; 
-                    background: white;
-                    margin: 6px;
-                    padding: 6px;
-                    border-radius: 12px;
-                }
-            }
-        }
+        //         .schedule-show {
+        //             white-space: nowrap;
+        //             overflow: hidden; 
+        //             background: white;
+        //             margin: 6px;
+        //             padding: 6px;
+        //             border-radius: 12px;
+        //         }
+        //     }
+        // }
     }
 }

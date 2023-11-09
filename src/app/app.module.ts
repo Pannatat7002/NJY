@@ -27,7 +27,10 @@ import { OxygenLevelPageComponent } from './container/landing-page/component/vit
 import { SugarLevelPageComponent } from './container/landing-page/component/vital-sign-page/sugar-level-page/sugar-level-page.component';
 import { MedicinePageComponent } from './container/landing-page/component/medicine-page/medicine-page.component';
 import { MedicineHistoryComponent } from './container/landing-page/component/medicine-page/component/medicine-history/medicine-history.component';
-import { MedicineStartComponent } from './container/landing-page/component/medicine-page/component/medicine-start/medicine-start.component'; // นำเข้า ChartsModule
+import { MedicineStartComponent } from './container/landing-page/component/medicine-page/component/medicine-start/medicine-start.component';
+import { CarouselActivityComponent } from './container/landing-page/component/home-page/component/tab-carousel-activity/carousel-activity.component';
+import { TabInsightsComponent } from './container/landing-page/component/home-page/component/tab-insights/tab-insights.component';
+import { TabScheduleComponent } from './container/landing-page/component/home-page/component/tab-schedule/tab-schedule.component'; // นำเข้า ChartsModule
 
 // import { MainPageComponent } from './container/Landing-page/component/main-page/main-page.component';
 
@@ -49,7 +52,10 @@ import { MedicineStartComponent } from './container/landing-page/component/medic
     SugarLevelPageComponent,
     MedicinePageComponent,
     MedicineHistoryComponent,
-    MedicineStartComponent
+    MedicineStartComponent,
+    CarouselActivityComponent,
+    TabInsightsComponent,
+    TabScheduleComponent
   ],
   imports: [
     BrowserModule,
