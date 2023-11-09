@@ -1,5 +1,6 @@
 import { Component, OnInit,Output,EventEmitter,Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-home-page',
@@ -12,10 +13,15 @@ export class HomePageComponent implements OnInit {
   nameHeader:any
   constructor(
     private router: Router,
-
-  ) { }
-
-  ngOnInit(): void {
+    private cookieService: CookieService,
+    
+    ) { }
+    
+    ngOnInit(): void {
+    const Token = this.cookieService.get('accessToken')
+    if (!Token || Token === undefined) {
+      this.router.navigate([''])
+    }
     console.log('HomePageComponent userProfile',this.userProfile);
     this.nameHeader = this.userProfile.name
   }
