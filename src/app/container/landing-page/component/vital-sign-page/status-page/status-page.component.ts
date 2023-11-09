@@ -81,7 +81,7 @@ export class StatusPageComponent implements OnInit {
         label: item.badge,
         borderColor: '#dc3545',
         backgroundColor	:"#dc3545",
-        barThickness: 10,//ความหนา
+        barThickness: 8,//ความหนา
         barPercentage: 1,
         borderRadius:10,
         maxBarThickness:150,

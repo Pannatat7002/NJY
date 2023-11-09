@@ -16,7 +16,7 @@
             <div style="width: 100%;margin-bottom: 0px;font-size: 28px;height: 30px;color: #343a40;">เดือน :
                 {{mouthNow}}</div>
         </div>
-        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+        <canvas style="margin: 12px;" baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
             [plugins]="barChartPlugins" [legend]="barChartLegend" [type]="barChartType">
         </canvas>
         <div class="summary">

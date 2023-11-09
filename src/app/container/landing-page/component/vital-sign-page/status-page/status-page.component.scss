@@ -60,15 +60,11 @@ canvas {
 }
 
 .summary {
-    // display: flex;
-    // justify-content: left;
     display: grid;
     grid-template-columns: 50% 50%;
-    width: 100%;
     overflow: hidden;
     white-space: nowrap;
-    padding-top: 12px;
-
+    margin: 12px;
     .task-content {
         cursor: pointer;
         margin-bottom: 0;
@@ -82,8 +78,10 @@ canvas {
         .task-box{
             width: 100%;
             .text-title {
-                padding: 6px;
-                font-size: 22px;
+                // padding: 6px;
+                // font-size: 22px;
+                // line-height: 40px;
+                font-size: 19px;
                 line-height: 40px;
             }
     
